@@ -104,6 +104,12 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+  .features_title {
+    font-size: 20px;
+  }
+  .features_icon {
+    transform: scale(1);
+  }
   .gradient_left {
     top: -350px;
     left: -200px;
