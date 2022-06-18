@@ -250,7 +250,7 @@
       <!-- Bootstrap Section Start -->
       <section class="relative">
         <div class="bg-blue-50/50 mb-24">
-          <div class="container mx-auto mt-16 p-4">
+          <div class="container mx-auto mt-16 px-4 pt-4 md:pb-4">
             <div class="flex flex-col md:flex-row gap-8 md:gap-4 mt-8">
               <div class="flex flex-col gap-4">
                 <div
@@ -265,12 +265,12 @@
                 </div>
               </div>
               <div>
-                <div class="p-6 bg-white rounded-2xl">
-                  <p class="text-gray-500 text-base">
+                <div class="p-6 bg-white rounded-2xl mb-4 md:mb-0">
+                  <p class="text-gray-500 text-sm md:text-base">
                     We budgeted for 2 full-time devs to work on our desktop app.
                     We just got all that dev time back.
                   </p>
-                  <p class="mt-2 mb-6 text-gray-500 text-base">
+                  <p class="mt-2 mb-6 text-gray-500 text-sm md:text-base">
                     Our app is rock-solid and has a ton of native functionality
                     that would have taken us months to implement.
                   </p>
@@ -291,17 +291,98 @@
                 </div>
               </div>
             </div>
-            <div>
-              <img
-                src="assets/bootstrap_video.png"
-                alt=""
-                class="pt-6 md:py-2 bootstrap_video"
-              />
-            </div>
           </div>
+          <!--  -->
+          <div class="flex justify-end md:justify-center items-center">
+            <img
+              src="assets/bootstrap_video.png"
+              alt=""
+              class="pb-6 md:py-2 bootstrap_video overflow-hidden"
+            />
+          </div>
+          <!--  -->
         </div>
       </section>
       <!-- Bootstrap Section End -->
+      <!-- Code Section Start -->
+      <section class="relative">
+        <div class="container mx-auto mt-16 p-4">
+          <div class="grid md:grid-cols-2 justify-between gap-8 mt-8">
+            <div class="flex flex-col gap-4">
+              <div
+                class="bg-blue-100/75 px-6 py-1.5 text-gray-700 rounded-full w-fit font-medium"
+              >
+                Step 2
+              </div>
+              <div class="text-4xl mt-2 font-bold">Code</div>
+              <div class="text-gray-500 font-light text-base md:text-lg">
+                You can add native desktop functionality straight into your web
+                app’s codebase. No need to create a new repository, just
+                sprinkle some code from our desktop APIs and get access to
+                system level functionality.
+              </div>
+              <div class="grid grid-cols-2 justify-between gap-8 mt-4">
+                <div class="flex flex-col gap-4">
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="code_list_title">Native notifications</p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="code_list_title">
+                      Register global keyboard shortcut
+                    </p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="code_list_title">Application menu</p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="code_list_title">File system</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="code_list_title">Context menus</p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="code_list_title">Dock/icon</p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="code_list_title">Isolated browser views</p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="code_list_title">…and 17 more APIs in our docs</p>
+                  </div>
+                </div>
+                <button
+                  class="px-6 py-2 text-md rounded-md action_button text-gray-100 w-fit mt-4"
+                >
+                  Read our docs
+                </button>
+              </div>
+            </div>
+            <div>
+              <img src="assets/code.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="flex justify-end">
+          <img
+            src="assets/app_bar.png"
+            alt=""
+            class="code_image overflow-hidden"
+          />
+        </div>
+        <!--  -->
+      </section>
+      <!-- Code Section End -->
     </main>
     <script src="main.js"></script>
   </body>
