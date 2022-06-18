@@ -8,24 +8,37 @@
     <link rel="stylesheet" href="tailwind.css" />
   </head>
   <body>
+    <div class="blur-3xl absolute md:hidden top-0 md:top-12 -z-10">
+      <svg class="hero_backdrop_left">
+        <rect x="10" y="5" width="150" height="350" style="fill: #e0e7ff" />
+      </svg>
+    </div>
     <!-- Header Start -->
-    <header class="drop-shadow-sm border-b-2 md:border-none border-gray-200/50">
+    <header class="shadow-inner border-b-2 md:border-none border-gray-200/50">
       <div class="container mx-auto">
         <section class="flex justify-between items-center p-4">
           <div class="flex gap-8 items-center">
             <img src="assets/logo.svg" alt="logo" class="w-32" />
-            <div class="hidden md:block w-0.5 h-8 bg-gray-200"></div>
-            <div class="hidden md:block">Docs</div>
-            <div class="hidden md:block">Login</div>
-            <div class="hidden md:block">Signup</div>
+            <div class="hidden md:block w-0.5 h-8 bg-gray-300"></div>
+            <div class="nav_item">
+              <a href="#">Docs</a>
+            </div>
+            <div class="nav_item">
+              <a href="#">Login</a>
+            </div>
+            <div class="nav_item">
+              <a href="#">Signup</a>
+            </div>
           </div>
           <div>
             <div class="hidden md:flex items-center gap-4">
               <div>
                 <img src="assets/electron_developer.svg" alt="" />
               </div>
-              <div class="border-b-2 border-blue-500/50 font-light">
-                For Electron Developers
+              <div
+                class="border-b-2 border-blue-500/50 hover:border-blue-500 font-light nav_item"
+              >
+                <a href="#">For Electron Developers</a>
               </div>
               <div>
                 <img
@@ -44,16 +57,26 @@
       <!-- Hero Section Start -->
       <section class="relative">
         <!-- Hero Backdrop Left -->
-        <div class="blur-3xl absolute -z-10">
+        <div class="blur-2xl hidden md:block absolute top-0 md:top-12 -z-10">
           <svg class="hero_backdrop_left">
-            <circle cx="100" cy="200" r="220" fill="#e0e7ff" />
+            <rect x="10" y="5" width="150" height="350" style="fill: #e0e7ff" />
+          </svg>
+        </div>
+        <div class="hidden md:block blur-2xl absolute top-24 left-40 -z-10">
+          <svg class="hero_backdrop_circle_left">
+            <circle cx="100" cy="100" r="100" fill="#E7F2FF" />
           </svg>
         </div>
         <!-- Hero Backdrop Left -->
         <!-- Hero Backdrop Right -->
-        <div class="blur-3xl absolute right-0 top-96 md:top-12 -z-10">
+        <div class="blur-2xl absolute right-0 top-96 md:top-12 -z-10">
           <svg class="hero_backdrop_right">
             <circle cx="400" cy="200" r="250" fill="#e0e7ff" />
+          </svg>
+        </div>
+        <div class="hidden md:block blur-xl absolute top-32 right-40 -z-10">
+          <svg class="hero_backdrop_circle_right">
+            <circle cx="100" cy="100" r="100" fill="#E7F2FF" />
           </svg>
         </div>
         <!-- Hero Backdrop Right -->
@@ -68,17 +91,17 @@
               >
                 Make your web app into a beautiful desktop app
               </h1>
-              <p class="text-base lg:text-xl text-gray-500">
+              <p class="text-base lg:text-lg text-gray-500">
                 Cross-platform desktop apps with cutting edge native
                 functionality.
               </p>
               <div class="flex items-center gap-4 mt-4 mb-4 lg:mb-8">
                 <div class="flex items-center gap-2">
-                  <img src="assets/built_in_minutes.svg" alt="" />
+                  <img src="assets/built_in_minutes.svg" alt="" class="w-5" />
                   <p>Build in minutes</p>
                 </div>
                 <div class="flex items-center gap-2">
-                  <img src="assets/code-optional.svg" alt="" />
+                  <img src="assets/code-optional.svg" alt="" class="w-5" />
                   <p>Code optional</p>
                 </div>
               </div>
@@ -86,7 +109,7 @@
               <div class="grid grid-cols-2 gap-0 mt-4 lg:mt-6 text-lg">
                 <label class="relative">
                   <span
-                    class="absolute inset-y-0 left-0 flex items-center pl-2.5"
+                    class="absolute inset-y-0 left-2 flex items-center pl-2.5"
                   >
                     <img
                       src="assets/input_placeholder_icon.svg"
@@ -95,7 +118,7 @@
                     />
                   </span>
                   <input
-                    class="placeholder:text-slate-400 bg-white border-2 border-gray-200 rounded-md p-2 pl-9 pr-3 shadow-sm focus:outline-none w-full"
+                    class="placeholder:text-slate-400 bg-white border-2 border-gray-200/75 rounded-md p-2 pl-12 pr-3 shadow-sm focus:outline-none w-full text-base"
                     placeholder="https://"
                     type="text"
                     name="search"
@@ -122,7 +145,7 @@
             </div>
           </section>
           <div
-            class="text-right pt-10 xl:pt-16 mr-4 md:mr-12 flex justify-center md:justify-end gap-4"
+            class="text-right pt-10 xl:pt-16 mr-4 md:mr-12 flex justify-center md:justify-end gap-2"
           >
             <img src="assets/y_combinator.svg" alt="" />
             <p>We are backed by Y Combinator</p>
@@ -152,15 +175,44 @@
             <h1 class="text-4xl text-center font-bold">
               Types of apps you can build with ToDesktop
             </h1>
-            <div class="flex flex-col md:flex-row gap-4 mt-16">
+            <div class="flex flex-col md:flex-row gap-8 mt-16">
               <div class="flex flex-col gap-12">
-                <div class="flex gap-4">
-                  <div>
-                    <img
-                      src="assets/web_app.svg"
-                      alt=""
-                      class="features_icon"
-                    />
+                <div class="features_item">
+                  <div class="svg_icon">
+                    <svg
+                      width="35"
+                      height="35"
+                      viewBox="0 0 35 35"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_199_509)">
+                        <path
+                          d="M2.19727 28.8187H31.8459"
+                          stroke="#909EB8"
+                          stroke-width="2.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M27.109 7.75256H7.71482C6.82222 7.75256 6.09863 8.48613 6.09863 9.39104V22.4989C6.09863 23.4038 6.82222 24.1373 7.71482 24.1373H27.109C28.0016 24.1373 28.7252 23.4038 28.7252 22.4989V9.39104C28.7252 8.48613 28.0016 7.75256 27.109 7.75256Z"
+                          stroke="#909EB8"
+                          stroke-width="2.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_199_509">
+                          <rect
+                            width="34.33"
+                            height="34.33"
+                            fill="white"
+                            transform="translate(0.0463867 0.359619)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
                   </div>
                   <div>
                     <h3 class="features_title">Web app → Desktop app</h3>
@@ -170,13 +222,30 @@
                     </p>
                   </div>
                 </div>
-                <div class="flex gap-4">
-                  <div>
-                    <img
-                      src="assets/native_notifications.svg"
-                      alt=""
-                      class="features_icon"
-                    />
+                <div class="features_item">
+                  <div class="svg_icon">
+                    <svg
+                      width="35"
+                      height="35"
+                      viewBox="0 0 35 35"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.4853 6.96924H8.26373C7.34051 6.96924 6.4551 7.34863 5.80228 8.02396C5.14946 8.69929 4.78271 9.61523 4.78271 10.5703V26.775C4.78271 27.7301 5.14946 28.646 5.80228 29.3213C6.4551 29.9967 7.34051 30.3761 8.26373 30.3761H23.9283C24.8515 30.3761 25.7369 29.9967 26.3897 29.3213C27.0426 28.646 27.4093 27.7301 27.4093 26.775V21.3734"
+                        stroke="#909EB8"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M25.8488 13.9912C28.8652 13.9912 31.3104 11.546 31.3104 8.52965C31.3104 5.51329 28.8652 3.06805 25.8488 3.06805C22.8324 3.06805 20.3872 5.51329 20.3872 8.52965C20.3872 11.546 22.8324 13.9912 25.8488 13.9912Z"
+                        stroke="#909EB8"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
                   </div>
                   <div>
                     <h3 class="features_title">Native Notifications</h3>
@@ -186,9 +255,23 @@
                     </p>
                   </div>
                 </div>
-                <div class="flex gap-4">
-                  <div>
-                    <img src="assets/panel.svg" alt="" class="features_icon" />
+                <div class="features_item">
+                  <div class="svg_icon">
+                    <svg
+                      width="38"
+                      height="39"
+                      viewBox="0 0 38 39"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.2526 13.3788C9.54373 13.3788 8.85078 13.1686 8.26136 12.7747C7.67195 12.3809 7.21256 11.8211 6.94129 11.1662C6.67001 10.5113 6.59903 9.79063 6.73733 9.09537C6.87562 8.40011 7.21698 7.76148 7.71823 7.26023C8.21949 6.75897 8.85812 6.41761 9.55338 6.27932C10.2486 6.14102 10.9693 6.212 11.6242 6.48328C12.2791 6.75455 12.8389 7.21395 13.2327 7.80336C13.6266 8.39277 13.8368 9.08573 13.8368 9.79461V27.7154C13.8368 28.4243 13.6266 29.1172 13.2327 29.7066C12.8389 30.296 12.2791 30.7554 11.6242 31.0267C10.9693 31.298 10.2486 31.369 9.55338 31.2307C8.85812 31.0924 8.21949 30.751 7.71823 30.2498C7.21698 29.7485 6.87562 29.1099 6.73733 28.4146C6.59903 27.7194 6.67001 26.9987 6.94129 26.3438C7.21256 25.6889 7.67195 25.1291 8.26136 24.7353C8.85078 24.3414 9.54373 24.1312 10.2526 24.1312H28.1734C28.8823 24.1312 29.5752 24.3414 30.1646 24.7353C30.754 25.1291 31.2134 25.6889 31.4847 26.3438C31.756 26.9987 31.827 27.7194 31.6887 28.4146C31.5504 29.1099 31.209 29.7485 30.7078 30.2498C30.2065 30.751 29.5679 31.0924 28.8726 31.2307C28.1774 31.369 27.4567 31.298 26.8018 31.0267C26.1469 30.7554 25.5871 30.296 25.1933 29.7066C24.7994 29.1172 24.5892 28.4243 24.5892 27.7154V9.79461C24.5892 9.08573 24.7994 8.39277 25.1933 7.80336C25.5871 7.21395 26.1469 6.75455 26.8018 6.48328C27.4567 6.212 28.1774 6.14102 28.8726 6.27932C29.5679 6.41761 30.2065 6.75897 30.7078 7.26023C31.209 7.76148 31.5504 8.40011 31.6887 9.09537C31.827 9.79063 31.756 10.5113 31.4847 11.1662C31.2134 11.8211 30.754 12.3809 30.1646 12.7747C29.5752 13.1686 28.8823 13.3788 28.1734 13.3788H10.2526Z"
+                        stroke="#909EB8"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
                   </div>
                   <div>
                     <h3 class="features_title">Panel</h3>
@@ -198,13 +281,37 @@
                     </p>
                   </div>
                 </div>
-                <div class="flex gap-4">
-                  <div>
-                    <img
-                      src="assets/multi_window.svg"
-                      alt=""
-                      class="features_icon"
-                    />
+                <div class="features_item">
+                  <div class="svg_icon">
+                    <svg
+                      width="35"
+                      height="35"
+                      viewBox="0 0 35 35"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M25.7944 10.3301V24.6347C25.7944 25.5216 25.7658 26.3084 25.6657 27.0093C25.2508 30.7714 23.4771 31.787 18.6421 31.787H15.7812C10.9462 31.787 9.17248 30.7714 8.75765 27.0093C8.65752 26.3084 8.62891 25.5216 8.62891 24.6347V10.3301C8.62891 9.44326 8.65752 8.65651 8.75765 7.95559C9.17248 4.19348 10.9462 3.17786 15.7812 3.17786H18.6421C23.4771 3.17786 25.2508 4.19348 25.6657 7.95559C25.7658 8.65651 25.7944 9.44326 25.7944 10.3301Z"
+                        stroke="#909EB8"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M8.62808 24.6347C8.62808 25.5216 8.65669 26.3084 8.75682 27.0093C8.55656 27.0236 8.3706 27.0236 8.15603 27.0236H7.66967C3.86466 27.0236 2.90625 26.0652 2.90625 22.2459V12.719C2.90625 8.89969 3.86466 7.94128 7.66967 7.94128H8.15603C8.3706 7.94128 8.55656 7.94128 8.75682 7.95559C8.65669 8.65651 8.62808 9.44326 8.62808 10.3301V24.6347Z"
+                        stroke="#909EB8"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M31.5156 12.719V22.2459C31.5156 26.0652 30.5572 27.0236 26.7522 27.0236H26.2658C26.0513 27.0236 25.8653 27.0236 25.665 27.0093C25.7652 26.3084 25.7938 25.5216 25.7938 24.6347V10.3301C25.7938 9.44326 25.7652 8.65651 25.665 7.95559C25.8653 7.94128 26.0513 7.94128 26.2658 7.94128H26.7522C30.5572 7.94128 31.5156 8.89969 31.5156 12.719Z"
+                        stroke="#909EB8"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
                   </div>
                   <div>
                     <h3 class="features_title">Multi-window</h3>
@@ -214,9 +321,44 @@
                     </p>
                   </div>
                 </div>
-                <div class="flex gap-4">
-                  <div>
-                    <img src="assets/tabbed.svg" alt="" class="features_icon" />
+                <div class="features_item">
+                  <div class="svg_icon">
+                    <svg
+                      width="35"
+                      height="35"
+                      viewBox="0 0 35 35"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M31.5167 7.66964V12.9623C31.5167 16.1809 30.2293 17.4683 27.0108 17.4683H23.1485C19.93 17.4683 18.6426 16.1809 18.6426 12.9623V7.66964C18.6426 4.45111 19.93 3.1637 23.1485 3.1637H27.0108C30.2293 3.1637 31.5167 4.45111 31.5167 7.66964Z"
+                        stroke="#909EB8"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15.7804 21.9742V27.2669C15.7804 30.4854 14.493 31.7728 11.2744 31.7728H7.41219C4.19366 31.7728 2.90625 30.4854 2.90625 27.2669V21.9742C2.90625 18.7557 4.19366 17.4683 7.41219 17.4683H11.2744C14.493 17.4683 15.7804 18.7557 15.7804 21.9742Z"
+                        stroke="#909EB8"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M31.5161 21.7596C31.5161 27.2955 27.0388 31.7728 21.5029 31.7728L23.0049 29.2695"
+                        stroke="#909EB8"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M2.90625 13.177C2.90625 7.64115 7.38358 3.16382 12.9195 3.16382L11.4175 5.66712"
+                        stroke="#909EB8"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
                   </div>
                   <div>
                     <h3 class="features_title">Tabbed</h3>
@@ -226,9 +368,48 @@
                     </p>
                   </div>
                 </div>
-                <div class="flex gap-4">
-                  <div>
-                    <img src="assets/tray.svg" alt="" class="features_icon" />
+                <div class="features_item">
+                  <div class="svg_icon">
+                    <svg
+                      width="34"
+                      height="34"
+                      viewBox="0 0 34 34"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M24.0777 14.7077H26.8242C29.5707 14.7077 30.9439 13.3345 30.9439 10.588V7.84152C30.9439 5.09504 29.5707 3.7218 26.8242 3.7218H24.0777C21.3312 3.7218 19.958 5.09504 19.958 7.84152V10.588C19.958 13.3345 21.3312 14.7077 24.0777 14.7077Z"
+                        stroke="#909EB8"
+                        stroke-width="2.4"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M7.59823 31.1866H10.3447C13.0912 31.1866 14.4644 29.8134 14.4644 27.0669V24.3204C14.4644 21.5739 13.0912 20.2007 10.3447 20.2007H7.59823C4.85176 20.2007 3.47852 21.5739 3.47852 24.3204V27.0669C3.47852 29.8134 4.85176 31.1866 7.59823 31.1866Z"
+                        stroke="#909EB8"
+                        stroke-width="2.4"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M8.97147 14.7077C12.0052 14.7077 14.4644 12.2484 14.4644 9.21476C14.4644 6.18108 12.0052 3.7218 8.97147 3.7218C5.9378 3.7218 3.47852 6.18108 3.47852 9.21476C3.47852 12.2484 5.9378 14.7077 8.97147 14.7077Z"
+                        stroke="#909EB8"
+                        stroke-width="2.4"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M25.451 31.1866C28.4846 31.1866 30.9439 28.7273 30.9439 25.6936C30.9439 22.66 28.4846 20.2007 25.451 20.2007C22.4173 20.2007 19.958 22.66 19.958 25.6936C19.958 28.7273 22.4173 31.1866 25.451 31.1866Z"
+                        stroke="#909EB8"
+                        stroke-width="2.4"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
                   </div>
                   <div>
                     <h3 class="features_title">Tray</h3>
@@ -250,8 +431,8 @@
       <!-- Bootstrap Section Start -->
       <section class="relative">
         <div class="bg-blue-50/50 mb-24">
-          <div class="container mx-auto mt-16 px-4 pt-4 md:pb-4">
-            <div class="flex flex-col md:flex-row gap-8 md:gap-4 mt-8">
+          <div class="container mx-auto mt-16 px-4 pt-12 md:pb-4">
+            <div class="flex flex-col md:flex-row gap-8 md:gap-4 mt-12">
               <div class="flex flex-col gap-4">
                 <div
                   class="bg-blue-100/75 px-6 py-1.5 text-gray-700 rounded-full w-fit font-medium"
@@ -265,7 +446,10 @@
                 </div>
               </div>
               <div>
-                <div class="p-6 bg-white rounded-2xl mb-4 md:mb-0">
+                <div
+                  class="p-6 bg-white rounded-2xl mb-4 md:mb-0"
+                  style="box-shadow: 0px 5px 16px rgba(0, 19, 41, 0.07)"
+                >
                   <p class="text-gray-500 text-sm md:text-base">
                     We budgeted for 2 full-time devs to work on our desktop app.
                     We just got all that dev time back.
@@ -297,17 +481,36 @@
             <img
               src="assets/bootstrap_video.png"
               alt=""
-              class="pb-6 md:py-2 bootstrap_video overflow-hidden"
+              class="pb-6 md:pb-0 bootstrap_video overflow-hidden"
             />
+            <div
+              class="absolute bg-blue-500 px-6 py-5 rounded-full shadow-inner cursor-pointer"
+              style="border: 12px solid #dbeafe"
+            >
+              <svg
+                width="28"
+                height="35"
+                viewBox="0 0 28 35"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.08068 34.12L26.6217 19.7597C28.2564 18.6995 28.2564 16.1932 26.6217 15.133L5.08068 0.77218C3.25354 -0.480415 0.753418 0.868906 0.753418 3.08547V31.8067C0.753418 34.0239 3.25337 35.3731 5.08068 34.12Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
           </div>
           <!--  -->
         </div>
       </section>
       <!-- Bootstrap Section End -->
       <!-- Code Section Start -->
-      <section class="relative">
+      <section class="relative code">
         <div class="container mx-auto mt-0 md:mt-16 px-4">
-          <div class="grid md:grid-cols-2 justify-between gap-8 mt-8">
+          <div
+            class="grid md:grid-cols-2 items-center justify-between gap-8 mt-8"
+          >
             <div class="flex flex-col gap-4">
               <div
                 class="bg-blue-100/75 px-6 py-1.5 text-gray-700 rounded-full w-fit font-medium"
@@ -325,43 +528,57 @@
                 <div class="flex flex-col gap-4">
                   <div class="flex gap-2 items-start">
                     <img src="assets/check_icon.svg" alt="" />
-                    <p class="code_list_title">Native notifications</p>
-                  </div>
-                  <div class="flex gap-2 items-start">
-                    <img src="assets/check_icon.svg" alt="" />
                     <p class="code_list_title">
-                      Register global keyboard shortcut
+                      <a href="#">Native notifications</a>
                     </p>
                   </div>
                   <div class="flex gap-2 items-start">
                     <img src="assets/check_icon.svg" alt="" />
-                    <p class="code_list_title">Application menu</p>
+                    <p class="code_list_title">
+                      <a href="#"> Register global keyboard shortcut </a>
+                    </p>
                   </div>
                   <div class="flex gap-2 items-start">
                     <img src="assets/check_icon.svg" alt="" />
-                    <p class="code_list_title">File system</p>
+                    <p class="code_list_title">
+                      <a href="#"> Application menu </a>
+                    </p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="code_list_title">
+                      <a href="#"> File system </a>
+                    </p>
                   </div>
                 </div>
                 <div class="flex flex-col gap-4">
                   <div class="flex gap-2 items-start">
                     <img src="assets/check_icon.svg" alt="" />
-                    <p class="code_list_title">Context menus</p>
+                    <p class="code_list_title">
+                      <a href="#"> Context menus </a>
+                    </p>
                   </div>
                   <div class="flex gap-2 items-start">
                     <img src="assets/check_icon.svg" alt="" />
-                    <p class="code_list_title">Dock/icon</p>
+                    <p class="code_list_title">
+                      <a href="#">Dock/icon</a>
+                    </p>
                   </div>
                   <div class="flex gap-2 items-start">
                     <img src="assets/check_icon.svg" alt="" />
-                    <p class="code_list_title">Isolated browser views</p>
+                    <p class="code_list_title">
+                      <a href="#">Isolated browser views</a>
+                    </p>
                   </div>
                   <div class="flex gap-2 items-start">
                     <img src="assets/check_icon.svg" alt="" />
-                    <p class="code_list_title">…and 17 more APIs in our docs</p>
+                    <p class="code_list_title">
+                      <a href="#"> …and 17 more APIs in our docs </a>
+                    </p>
                   </div>
                 </div>
                 <button
-                  class="px-6 py-2 text-md rounded-md action_button text-gray-100 w-fit mt-4"
+                  class="px-6 py-2.5 text-md rounded-md action_button text-gray-100 w-fit mt-4"
                 >
                   Read our docs
                 </button>
@@ -414,7 +631,10 @@
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </div>
                 <div>
-                  <div class="p-6 bg-white rounded-2xl my-4 mb-4">
+                  <div
+                    class="p-6 bg-white rounded-2xl my-4 mb-4"
+                    style="box-shadow: 0px 5px 16px rgba(0, 19, 41, 0.07)"
+                  >
                     <p class="mt-2 mb-6 text-gray-500 text-sm md:text-base">
                       Our app is rock-solid and has a ton of native
                       functionality that would have taken us months to
@@ -436,7 +656,9 @@
                         </div>
                       </div>
                       <div>
-                        <h1 class="text-xl md:text-4xl font-medium text-blue-100 mr-4">
+                        <h1
+                          class="text-2xl md:text-4xl font-medium text-blue-100 mr-0 md:mr-4"
+                        >
                           ↑34%
                         </h1>
                       </div>
@@ -492,7 +714,396 @@
           </div>
         </div>
       </section>
-      <!-- Public Section End -->
+      <!-- Publish Section End -->
+      <!-- Benefits Section Start -->
+      <section class="relative code">
+        <div class="container mx-auto mt-16 px-4">
+          <h1 class="text-4xl text-center font-bold">All Features/Benefits</h1>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            <div class="features_container p-6">
+              <div class="flex items-center gap-4 md:gap-2">
+                <div class="features_icon">
+                  <img src="assets/one_click_access.png" alt="" />
+                </div>
+                <div class="text-xl lg:text-2xl font-medium">
+                  One-click access
+                </div>
+              </div>
+              <div class="mt-4">
+                <p class="text-gray-500 ml-0 md:ml-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Semper eu scelerisque.
+                </p>
+              </div>
+            </div>
+            <div class="features_container p-6">
+              <div class="flex items-center gap-4 md:gap-2">
+                <div class="features_icon">
+                  <img src="assets/no_distractions.png" alt="" />
+                </div>
+                <div class="text-xl lg:text-2xl font-medium">
+                  No distractions
+                </div>
+              </div>
+              <div class="mt-4">
+                <p class="text-gray-500 ml-0 md:ml-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Semper eu scelerisque.
+                </p>
+              </div>
+            </div>
+            <div class="features_container p-6">
+              <div class="flex items-center gap-4 md:gap-2">
+                <div class="features_icon">
+                  <img src="assets/system.png" alt="" />
+                </div>
+                <div class="text-xl lg:text-2xl font-medium">
+                  Windows, Mac, Linux
+                </div>
+              </div>
+              <div class="mt-4">
+                <p class="text-gray-500 ml-0 md:ml-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Semper eu scelerisque.
+                </p>
+              </div>
+            </div>
+            <div class="features_container p-6">
+              <div class="flex items-center gap-4 md:gap-2">
+                <div class="features_icon">
+                  <img src="assets/code_signing.png" alt="" />
+                </div>
+                <div class="text-xl lg:text-2xl font-medium">Code signing</div>
+              </div>
+              <div class="mt-4">
+                <p class="text-gray-500 ml-0 md:ml-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Semper eu scelerisque.
+                </p>
+              </div>
+            </div>
+            <div class="features_container p-6">
+              <div class="flex items-center gap-4 md:gap-2">
+                <div class="features_icon">
+                  <img src="assets/auto–updates.png" alt="" />
+                </div>
+                <div class="text-xl lg:text-2xl font-medium">Auto updates</div>
+              </div>
+              <div class="mt-4">
+                <p class="text-gray-500 ml-0 md:ml-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Semper eu scelerisque.
+                </p>
+              </div>
+            </div>
+            <div class="features_container p-6">
+              <div class="flex items-center gap-4 md:gap-2">
+                <div class="features_icon">
+                  <img src="assets/native_installers.png" alt="" />
+                </div>
+                <div class="text-xl lg:text-2xl font-medium">
+                  Native installers
+                </div>
+              </div>
+              <div class="mt-4">
+                <p class="text-gray-500 ml-0 md:ml-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Semper eu scelerisque.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Benefits Section End -->
+      <!-- Package Section Start -->
+      <section class="relative">
+        <div class="bg-blue-50/50 mt-24">
+          <div class="container mx-auto p-4">
+            <h1 class="text-4xl text-center font-bold mt-8">
+              Choose the package that works for you
+            </h1>
+            <div></div>
+            <div
+              class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-2 lg:gap-6 items-center mt-12"
+            >
+              <!-- Essentials -->
+              <div class="p-6 bg-white rounded-xl">
+                <div class="flex items-center gap-2">
+                  <div>
+                    <svg
+                      width="24"
+                      height="25"
+                      viewBox="0 0 24 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.0901 13.9181H9.1801V21.1181C9.1801 22.7981 10.0901 23.1381 11.2001 21.8781L18.7701 13.2781C19.7001 12.2281 19.3101 11.3581 17.9001 11.3581H14.8101V4.15808C14.8101 2.47808 13.9001 2.13808 12.7901 3.39808L5.2201 11.9981C4.3001 13.0581 4.6901 13.9181 6.0901 13.9181Z"
+                        stroke="#006DF6"
+                        stroke-width="1.5"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="text-xl">Esssentials</div>
+                </div>
+                <div
+                  class="flex items-center gap-2 py-6 border-b-2 border-gray-200"
+                >
+                  <div class="text-4xl font-bold">$58</div>
+                  <div class="text-gray-500">/ month</div>
+                </div>
+                <div class="flex flex-col gap-4 mt-10">
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="publish_list_title">7-day free trail</p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="publish_list_title">Windows, Mac & Linux</p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="publish_list_title">Native notifications</p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="publish_list_title">Auto-updates</p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="publish_list_title">Code signing</p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="publish_list_title">Native installers</p>
+                  </div>
+                </div>
+                <div class="flex gap-2 mt-6 items-center">
+                  <div>
+                    <svg
+                      width="7"
+                      height="12"
+                      viewBox="0 0 7 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0.572523 11.527L6.90177 6.40472C7.03274 6.25749 7.03274 6.01877 6.90177 5.87153L0.572522 0.74939C0.361237 0.511862 -4.78997e-07 0.680016 -4.64309e-07 1.01602L-1.65136e-08 11.2604C-1.83089e-09 11.5963 0.361251 11.7645 0.572523 11.527Z"
+                        fill="#006DF6"
+                      />
+                    </svg>
+                  </div>
+                  <div class="text-gray-400">Show 6 more features</div>
+                </div>
+                <div class="mt-8">
+                  <button
+                    class="w-full text-center border-2 border-blue-400 text-blue-500 p-2 rounded-lg"
+                  >
+                    Choose plan
+                  </button>
+                </div>
+              </div>
+              <!-- Professional -->
+              <div class="p-6 bg-slate-900 rounded-xl">
+                <div class="flex items-center gap-2">
+                  <div>
+                    <svg
+                      width="24"
+                      height="25"
+                      viewBox="0 0 24 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16.7002 19.4794H7.3002C6.8802 19.4794 6.4102 19.1494 6.2702 18.7494L2.1302 7.16937C1.5402 5.50938 2.2302 4.99937 3.6502 6.01937L7.5502 8.80938C8.2002 9.25937 8.9402 9.02937 9.2202 8.29937L10.9802 3.60937C11.5402 2.10938 12.4702 2.10938 13.0302 3.60937L14.7902 8.29937C15.0702 9.02937 15.8102 9.25937 16.4502 8.80938L20.1102 6.19937C21.6702 5.07937 22.4202 5.64938 21.7802 7.45937L17.7402 18.7694C17.5902 19.1494 17.1202 19.4794 16.7002 19.4794Z"
+                        stroke="#006DF6"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M6.5 22.499H17.5"
+                        stroke="#006DF6"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M9.50098 14.5H14.501"
+                        stroke="#006DF6"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="text-xl text-gray-50">Professional</div>
+                </div>
+                <div
+                  class="flex items-center gap-2 py-6 border-b-2 border-slate-600/50"
+                >
+                  <div class="text-4xl font-bold text-gray-50">$199</div>
+                  <div class="text-gray-400">/ month</div>
+                </div>
+                <div class="flex flex-col gap-4 mt-10">
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="professional_features_item">
+                      Everything in Essential
+                    </p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="professional_features_item">7-day free trail</p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="professional_features_item">
+                      Prority support & onboarding
+                    </p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="professional_features_item">Lunch at startup</p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="professional_features_item">
+                      Windows, Mac & Linux
+                    </p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="professional_features_item">
+                      Native notifications
+                    </p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="professional_features_item">Auto-updates</p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="professional_features_item">Code signing</p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="professional_features_item">Native installers</p>
+                  </div>
+                </div>
+                <div class="flex gap-2 mt-6 items-center">
+                  <div>
+                    <svg
+                      width="7"
+                      height="12"
+                      viewBox="0 0 7 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0.572523 11.527L6.90177 6.40472C7.03274 6.25749 7.03274 6.01877 6.90177 5.87153L0.572522 0.74939C0.361237 0.511862 -4.78997e-07 0.680016 -4.64309e-07 1.01602L-1.65136e-08 11.2604C-1.83089e-09 11.5963 0.361251 11.7645 0.572523 11.527Z"
+                        fill="#006DF6"
+                      />
+                    </svg>
+                  </div>
+                  <div class="text-gray-400">Show 6 more features</div>
+                </div>
+                <div class="mt-8">
+                  <button
+                    class="px-6 py-2.5 text-md rounded-md action_button text-gray-100 w-full mt-4"
+                  >
+                    Choose plan
+                  </button>
+                </div>
+              </div>
+              <div class="p-6 bg-white rounded-xl">
+                <div class="flex items-center gap-2">
+                  <div>
+                    <svg
+                      width="24"
+                      height="25"
+                      viewBox="0 0 24 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.0901 13.9181H9.1801V21.1181C9.1801 22.7981 10.0901 23.1381 11.2001 21.8781L18.7701 13.2781C19.7001 12.2281 19.3101 11.3581 17.9001 11.3581H14.8101V4.15808C14.8101 2.47808 13.9001 2.13808 12.7901 3.39808L5.2201 11.9981C4.3001 13.0581 4.6901 13.9181 6.0901 13.9181Z"
+                        stroke="#006DF6"
+                        stroke-width="1.5"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="text-xl">Esssentials</div>
+                </div>
+                <div
+                  class="flex items-center gap-2 py-6 border-b-2 border-gray-200"
+                >
+                  <div class="text-4xl font-bold">$58</div>
+                  <div class="text-gray-500">/ month</div>
+                </div>
+                <div class="flex flex-col gap-4 mt-10">
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="publish_list_title">7-day free trail</p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="publish_list_title">Windows, Mac & Linux</p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="publish_list_title">Native notifications</p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="publish_list_title">Auto-updates</p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="publish_list_title">Code signing</p>
+                  </div>
+                  <div class="flex gap-2 items-start">
+                    <img src="assets/check_icon.svg" alt="" />
+                    <p class="publish_list_title">Native installers</p>
+                  </div>
+                </div>
+                <div class="flex gap-2 mt-6 items-center">
+                  <div>
+                    <svg
+                      width="7"
+                      height="12"
+                      viewBox="0 0 7 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0.572523 11.527L6.90177 6.40472C7.03274 6.25749 7.03274 6.01877 6.90177 5.87153L0.572522 0.74939C0.361237 0.511862 -4.78997e-07 0.680016 -4.64309e-07 1.01602L-1.65136e-08 11.2604C-1.83089e-09 11.5963 0.361251 11.7645 0.572523 11.527Z"
+                        fill="#006DF6"
+                      />
+                    </svg>
+                  </div>
+                  <div class="text-gray-400">Show 6 more features</div>
+                </div>
+                <div class="mt-8">
+                  <button
+                    class="w-full text-center border-2 border-blue-400 text-blue-500 p-2 rounded-lg"
+                  >
+                    Choose plan
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Package Section End -->
     </main>
     <script src="main.js"></script>
   </body>

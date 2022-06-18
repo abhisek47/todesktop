@@ -1,16 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap');
+@import url('http://fonts.cdnfonts.com/css/sf-pro-display');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-  font-family: 'Mukta', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, 'SF Pro Display', sans-serif;
 }
 
 .action_button {
   background-image: linear-gradient(to bottom, #5e83ff 0%, #2e33f1 51%);
+}
+
+.features_item:hover path {
+  stroke: #006df6;
+}
+
+.svg_icon {
+  height: fit-content;
+  background-color: #f0f9ff;
+  padding: 0.6rem; /* 8px */
+  border-radius: 10.9859px;
+  transition: 0.2s ease-in-out;
 }
 
 body,
@@ -22,11 +33,23 @@ svg {
   transform: scale(1.2);
 }
 
+.features_item {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  gap: 1rem; /* 16px */
+}
+
 .features_title {
   font-size: 1.5rem; /* 24px */
   line-height: 2rem; /* 32px */
   font-weight: 500;
-  margin-top: 0.5rem; /* 8px */
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.features_title:hover {
+  color: #000;
 }
 
 .features_icon {
@@ -34,8 +57,13 @@ svg {
 }
 
 .hero_backdrop_left {
-  width: 500px;
+  width: 300px;
   height: 500px;
+}
+
+.hero_backdrop_circle_left {
+  width: 200px;
+  height: 200px;
 }
 
 .hero_backdrop_right {
@@ -62,17 +90,28 @@ svg {
   object-position: 10% 0;
 }
 
-button {
+.nav_item {
+  display: block;
+  color: #666;
+  transition: 0.2s ease-in-out;
+}
+
+.nav_item:hover {
+  color: #111;
+}
+
+.code button,
+.professional_button {
   box-shadow: 0px 11.4462px 18.3139px rgba(87, 120, 254, 0.35);
 }
 .publish_list_title {
   color: #444;
 }
 .downloading_image {
-  width: 100%;
+  width: 800px;
   height: 190px;
   object-fit: cover;
-  object-position: -40% 0;
+  object-position: -60% 0;
 }
 
 .our_installer {
@@ -87,6 +126,41 @@ button {
   right: 10%;
 }
 
+.bootstrap_video {
+  width: 88%;
+  height: 550px;
+  object-fit: cover;
+  object-position: 2% 0;
+  margin-top: 2rem;
+  /* filter: drop-shadow(0px -20px 65px rgba(74, 74, 74, 0.12)); */
+}
+
+.features_container {
+  border-radius: 14px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.features_container:hover {
+  box-shadow: 0px 6px 20px rgba(0, 19, 41, 0.09);
+}
+
+/* bg-blue-100 w-16 h-16 flex items-center justify-center rounded-xl */
+
+.features_icon {
+  width: 5rem; /* 64px */
+  height: 5rem; /* 64px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f6ff;
+  border-radius: 12px;
+}
+
+.professional_features_item {
+  color: #909eb8;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .hero_banner {
     transform: scale(1.1);
@@ -95,24 +169,31 @@ button {
     left: 35%;
   }
   .code_image {
-    width: 100%;
-    height: 110px;
-    top: 50%;
-    object-fit: contain;
-    object-position: 100% 0;
+    width: 40%;
+    height: 120px;
+    top: 70%;
+    object-fit: cover;
+    object-position: 40% 0;
   }
   .downloading_image {
-    width: 100%;
-    height: 130px;
+    width: 810px;
+    height: 120px;
     object-fit: cover;
-    object-position: -40% 0;
+    object-position: -50% 0;
+  }
+  .bootstrap_video {
+    width: 88%;
+    height: 300px;
+    object-fit: cover;
+    object-position: 2% 0;
+    margin-top: 2rem;
   }
 }
 
 @media screen and (max-width: 767px) {
   .hero_backdrop_left {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
   }
   .hero_backdrop_right {
     width: 400px;
@@ -136,9 +217,9 @@ button {
   }
   .bootstrap_video {
     width: 100%;
-    height: 310px;
+    height: 350px;
     object-fit: cover;
-    object-position: 2% 0;
+    object-position: -14% 0;
     margin-bottom: 2rem;
   }
   .code_image {
@@ -151,13 +232,16 @@ button {
     font-size: 14px;
   }
   .downloading_image {
-    width: 100%;
-    height: 100px;
+    width: 810px;
+    height: 90px;
     object-fit: cover;
     margin-top: 1rem;
     object-position: -40% 0;
   }
-  .our_installer_right{
+  .our_installer_right {
     top: 50%;
+  }
+  .nav_item {
+    display: none;
   }
 }
