@@ -40,87 +40,213 @@
       </div>
     </header>
     <!-- Header End -->
-    <main class="relative">
+    <main>
       <!-- Hero Start -->
-      <div class="blur-3xl absolute -z-10">
-        <svg class="hero_backdrop_left">
-          <circle cx="100" cy="200" r="220" fill="#e0e7ff" />
-        </svg>
-      </div>
-      <div class="blur-3xl absolute right-0 top-96 md:top-12 -z-10">
-        <svg class="hero_backdrop_right">
-          <circle cx="400" cy="200" r="250" fill="#e0e7ff" />
-        </svg>
-      </div>
-      <div class="container mx-auto">
-        <section class="grid grid-row-2 md:grid-cols-2 gap-4 p-4 items-center">
-          <div class="md:mt-1 z-20">
-            <h1
-              class="text-4xl md:text-3xl lg:text-4xl xl:text-6xl mb-4 lg:mb-6 lg:mb-8 font-bold leading-tight"
-            >
-              Make your web app into a beautiful desktop app
-            </h1>
-            <p class="text-base lg:text-xl text-gray-500">
-              Cross-platform desktop apps with cutting edge native
-              functionality.
-            </p>
-            <div class="flex items-center gap-4 mt-4 mb-4 lg:mb-8">
-              <div class="flex items-center gap-2">
-                <img src="assets/built_in_minutes.svg" alt="" />
-                <p>Build in minutes</p>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="assets/code-optional.svg" alt="" />
-                <p>Code optional</p>
-              </div>
-            </div>
-            <p>Build your desktop app, enter URL below:</p>
-            <div class="grid grid-cols-2 gap-0 mt-4 lg:mt-6 text-lg">
-              <label class="relative">
-                <span
-                  class="absolute inset-y-0 left-0 flex items-center pl-2.5"
-                >
-                  <img
-                    src="assets/input_placeholder_icon.svg"
-                    alt=""
-                    class="w-5"
-                  />
-                </span>
-                <input
-                  class="placeholder:text-slate-400 bg-white border-2 border-gray-200 rounded-md p-2 pl-9 pr-3 shadow-sm focus:outline-none w-full"
-                  placeholder="https://"
-                  type="text"
-                  name="search"
-                />
-              </label>
-              <button
-                class="text-base rounded-md action_button text-gray-100 relative -left-4 w-40"
-              >
-                Build desktop app
-              </button>
-            </div>
-          </div>
-          <div class="mt-10 z-20">
-            <img
-              src="assets/hero_banner.png"
-              alt=""
-              class="hidden md:block hero_banner"
-            />
-            <img
-              src="assets/hero_banner_mobile.png"
-              alt=""
-              class="block md:hidden"
-            />
-          </div>
-        </section>
-        <div
-          class="text-right pt-10 xl:pt-16 mr-4 md:mr-12 flex justify-center md:justify-end gap-4"
-        >
-          <img src="assets/y_combinator.svg" alt="" />
-          <p>We are backed by Y Combinator</p>
+      <section class="relative">
+        <!-- Hero Backdrop Left -->
+        <div class="blur-3xl absolute -z-10">
+          <svg class="hero_backdrop_left">
+            <circle cx="100" cy="200" r="220" fill="#e0e7ff" />
+          </svg>
         </div>
-      </div>
+        <!-- Hero Backdrop Left -->
+        <!-- Hero Backdrop Right -->
+        <div class="blur-3xl absolute right-0 top-96 md:top-12 -z-10">
+          <svg class="hero_backdrop_right">
+            <circle cx="400" cy="200" r="250" fill="#e0e7ff" />
+          </svg>
+        </div>
+        <!-- Hero Backdrop Right -->
+        <!-- Banner Start -->
+        <div class="container mx-auto">
+          <section
+            class="grid grid-row-2 md:grid-cols-2 gap-4 p-4 items-center"
+          >
+            <div class="md:mt-1 z-20">
+              <h1
+                class="text-4xl md:text-3xl lg:text-4xl xl:text-6xl mb-4 lg:mb-6 lg:mb-8 font-bold leading-tight"
+              >
+                Make your web app into a beautiful desktop app
+              </h1>
+              <p class="text-base lg:text-xl text-gray-500">
+                Cross-platform desktop apps with cutting edge native
+                functionality.
+              </p>
+              <div class="flex items-center gap-4 mt-4 mb-4 lg:mb-8">
+                <div class="flex items-center gap-2">
+                  <img src="assets/built_in_minutes.svg" alt="" />
+                  <p>Build in minutes</p>
+                </div>
+                <div class="flex items-center gap-2">
+                  <img src="assets/code-optional.svg" alt="" />
+                  <p>Code optional</p>
+                </div>
+              </div>
+              <p>Build your desktop app, enter URL below:</p>
+              <div class="grid grid-cols-2 gap-0 mt-4 lg:mt-6 text-lg">
+                <label class="relative">
+                  <span
+                    class="absolute inset-y-0 left-0 flex items-center pl-2.5"
+                  >
+                    <img
+                      src="assets/input_placeholder_icon.svg"
+                      alt=""
+                      class="w-5"
+                    />
+                  </span>
+                  <input
+                    class="placeholder:text-slate-400 bg-white border-2 border-gray-200 rounded-md p-2 pl-9 pr-3 shadow-sm focus:outline-none w-full"
+                    placeholder="https://"
+                    type="text"
+                    name="search"
+                  />
+                </label>
+                <button
+                  class="text-base rounded-md action_button text-gray-100 relative -left-4 w-40"
+                >
+                  Build desktop app
+                </button>
+              </div>
+            </div>
+            <div class="mt-10 z-20">
+              <img
+                src="assets/hero_banner.png"
+                alt=""
+                class="hidden md:block hero_banner"
+              />
+              <img
+                src="assets/hero_banner_mobile.png"
+                alt=""
+                class="block md:hidden"
+              />
+            </div>
+          </section>
+          <div
+            class="text-right pt-10 xl:pt-16 mr-4 md:mr-12 flex justify-center md:justify-end gap-4"
+          >
+            <img src="assets/y_combinator.svg" alt="" />
+            <p>We are backed by Y Combinator</p>
+          </div>
+        </div>
+        <!-- Banner End -->
+      </section>
       <!-- Hero End -->
+      <!-- Features Section Start -->
+      <section class="relative">
+        <!-- Features Backdrop Left -->
+        <div class="blur-3xl absolute inset-y-2/4 -z-10">
+          <svg class="features_backdrop_left">
+            <circle cx="100" cy="200" r="220" fill="#e0e5ff" />
+          </svg>
+        </div>
+        <!-- Features Backdrop Left -->
+        <!-- Features Backdrop Right -->
+        <div class="blur-3xl absolute right-0 top-24 -z-10">
+          <svg class="features_backdrop_right">
+            <circle cx="300" cy="200" r="220" fill="#e0e5ff" />
+          </svg>
+        </div>
+        <!-- Features Backdrop Right -->
+        <div class="container mx-auto">
+          <section class="mt-10 md:mt-14 p-4">
+            <h1 class="text-4xl text-center font-bold">
+              Types of apps you can build with ToDesktop
+            </h1>
+            <div class="flex flex-col md:flex-row gap-4 mt-16">
+              <div class="flex flex-col gap-12">
+                <div class="flex gap-4">
+                  <div>
+                    <img
+                      src="assets/web_app.svg"
+                      alt=""
+                      class="features_icon"
+                    />
+                  </div>
+                  <div>
+                    <h3 class="features_title">Web app → Desktop app</h3>
+                    <p class="text-gray-400 font-light text-md md:text-lg">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Semper eu scelerisque.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-4">
+                  <div>
+                    <img
+                      src="assets/native_notifications.svg"
+                      alt=""
+                      class="features_icon"
+                    />
+                  </div>
+                  <div>
+                    <h3 class="features_title">Native Notifications</h3>
+                    <p class="text-gray-400 font-light text-md md:text-lg">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Semper eu scelerisque.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-4">
+                  <div>
+                    <img src="assets/panel.svg" alt="" class="features_icon" />
+                  </div>
+                  <div>
+                    <h3 class="features_title">Panel</h3>
+                    <p class="text-gray-400 font-light text-md md:text-lg">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Semper eu scelerisque.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-4">
+                  <div>
+                    <img
+                      src="assets/multi_window.svg"
+                      alt=""
+                      class="features_icon"
+                    />
+                  </div>
+                  <div>
+                    <h3 class="features_title">Multi-window</h3>
+                    <p class="text-gray-400 font-light text-md md:text-lg">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Semper eu scelerisque.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-4">
+                  <div>
+                    <img src="assets/tabbed.svg" alt="" class="features_icon" />
+                  </div>
+                  <div>
+                    <h3 class="features_title">Tabbed</h3>
+                    <p class="text-gray-400 font-light text-base md:text-lg">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Semper eu scelerisque.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-4">
+                  <div>
+                    <img src="assets/tray.svg" alt="" class="features_icon" />
+                  </div>
+                  <div>
+                    <h3 class="features_title">Tray</h3>
+                    <p class="text-gray-400 font-light text-md md:text-lg">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Semper eu scelerisque.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="order-first md:order-last mb-8 md:mb-0">
+                <img src="assets/features_video.png" alt="" />
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <!-- Features Section End -->
     </main>
     <script src="main.js"></script>
   </body>
