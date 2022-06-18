@@ -13,7 +13,8 @@
   background-image: linear-gradient(to bottom, #5e83ff 0%, #2e33f1 51%);
 }
 
-body {
+body,
+svg {
   overflow-x: hidden;
 }
 
@@ -99,6 +100,16 @@ body {
   transform: scale(1.1);
 }
 
+.hero_backdrop_left {
+  width: 500px;
+  height: 500px;
+}
+
+.hero_backdrop_right {
+  width: 400px;
+  height: 400px;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .hero_banner {
     transform: scale(1.1);
@@ -106,6 +117,14 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+  .hero_backdrop_left {
+    width: 200px;
+    height: 200px;
+  }
+  .hero_backdrop_right {
+    width: 400px;
+    height: 400px;
+  }
   .features_title {
     font-size: 20px;
   }

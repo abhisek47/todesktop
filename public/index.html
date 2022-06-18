@@ -40,26 +40,31 @@
       </div>
     </header>
     <!-- Header End -->
-    <main>
+    <main class="relative">
       <!-- Hero Start -->
-      <div class="blur-3xl absolute top-0 md:top-24 -z-10">
-        <svg height="500" width="500">
-          <circle cx="100" cy="50" r="200" fill="#e0e7ff" />
+      <div class="blur-3xl absolute -z-10">
+        <svg class="hero_backdrop_left">
+          <circle cx="100" cy="200" r="220" fill="#e0e7ff" />
+        </svg>
+      </div>
+      <div class="blur-3xl absolute right-0 top-96 md:top-12 -z-10">
+        <svg class="hero_backdrop_right">
+          <circle cx="400" cy="200" r="250" fill="#e0e7ff" />
         </svg>
       </div>
       <div class="container mx-auto">
         <section class="grid grid-row-2 md:grid-cols-2 gap-4 p-4 items-center">
           <div class="md:mt-1 z-20">
             <h1
-              class="text-4xl md:text-3xl lg:text-4xl xl:text-6xl mb-6 lg:mb-8 font-bold leading-tight"
+              class="text-4xl md:text-3xl lg:text-4xl xl:text-6xl mb-4 lg:mb-6 lg:mb-8 font-bold leading-tight"
             >
               Make your web app into a beautiful desktop app
             </h1>
-            <p class="text-xl text-gray-400">
+            <p class="text-base lg:text-xl text-gray-500">
               Cross-platform desktop apps with cutting edge native
               functionality.
             </p>
-            <div class="flex items-center gap-4 mt-4 mb-8">
+            <div class="flex items-center gap-4 mt-4 mb-4 lg:mb-8">
               <div class="flex items-center gap-2">
                 <img src="assets/built_in_minutes.svg" alt="" />
                 <p>Build in minutes</p>
@@ -70,7 +75,7 @@
               </div>
             </div>
             <p>Build your desktop app, enter URL below:</p>
-            <div class="grid grid-cols-2 gap-0 mt-6 text-lg">
+            <div class="grid grid-cols-2 gap-0 mt-4 lg:mt-6 text-lg">
               <label class="relative">
                 <span
                   class="absolute inset-y-0 left-0 flex items-center pl-2.5"
@@ -95,7 +100,7 @@
               </button>
             </div>
           </div>
-          <div class="mt-10 mb-16 z-20">
+          <div class="mt-10 z-20">
             <img
               src="assets/hero_banner.png"
               alt=""
@@ -109,16 +114,11 @@
           </div>
         </section>
         <div
-          class="text-right mr-4 md:mr-12 flex justify-center md:justify-end gap-4"
+          class="text-right pt-10 xl:pt-16 mr-4 md:mr-12 flex justify-center md:justify-end gap-4"
         >
           <img src="assets/y_combinator.svg" alt="" />
           <p>We are backed by Y Combinator</p>
         </div>
-      </div>
-      <div class="blur-3xl absolute -bottom-24 md:top-12 right-0">
-        <svg height="500" width="500">
-          <circle cx="400" cy="200" r="200" fill="#e0e7ff" />
-        </svg>
       </div>
       <!-- Hero End -->
     </main>
