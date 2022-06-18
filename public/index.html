@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="tailwind.css" />
   </head>
   <body>
-    <div class="gradient_left"></div>
+    <!-- Header Start -->
     <header class="drop-shadow-sm border-b-2 md:border-none border-gray-200/50">
       <div class="container mx-auto">
         <section class="flex justify-between items-center p-4">
@@ -39,10 +39,17 @@
         </section>
       </div>
     </header>
+    <!-- Header End -->
     <main>
+      <!-- Hero Start -->
+      <div class="blur-3xl absolute top-0 md:top-24 -z-10">
+        <svg height="500" width="500">
+          <circle cx="100" cy="50" r="200" fill="#e0e7ff" />
+        </svg>
+      </div>
       <div class="container mx-auto">
         <section class="grid grid-row-2 md:grid-cols-2 gap-4 p-4 items-center">
-          <div class="md:mt-10">
+          <div class="md:mt-1 z-20">
             <h1
               class="text-4xl md:text-3xl lg:text-4xl xl:text-6xl mb-6 lg:mb-8 font-bold leading-tight"
             >
@@ -88,12 +95,11 @@
               </button>
             </div>
           </div>
-          <div class="mt-10 mb-16">
-            <div class="gradient_right"></div>
+          <div class="mt-10 mb-16 z-20">
             <img
               src="assets/hero_banner.png"
               alt=""
-              class="ml-16 hidden md:block hero_banner"
+              class="hidden md:block hero_banner"
             />
             <img
               src="assets/hero_banner_mobile.png"
@@ -108,154 +114,13 @@
           <img src="assets/y_combinator.svg" alt="" />
           <p>We are backed by Y Combinator</p>
         </div>
-        <!-- video features -->
-        <section class="mt-16 p-4">
-          <div class="features_gradient_left"></div>
-          <h1 class="text-4xl text-center font-bold">
-            Types of apps you can build with ToDesktop
-          </h1>
-          <div class="flex flex-col md:flex-row gap-4 mt-16">
-            <div class="flex flex-col gap-12">
-              <div class="flex gap-4">
-                <div>
-                  <img src="assets/web_app.svg" alt="" class="features_icon" />
-                </div>
-                <div>
-                  <h3 class="features_title">Web app → Desktop app</h3>
-                  <p class="text-gray-400 font-light text-md md:text-lg">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Semper eu scelerisque.
-                  </p>
-                </div>
-              </div>
-              <div class="flex gap-4">
-                <div>
-                  <img
-                    src="assets/native_notifications.svg"
-                    alt=""
-                    class="features_icon"
-                  />
-                </div>
-                <div>
-                  <h3 class="features_title">Native Notifications</h3>
-                  <p class="text-gray-400 font-light text-md md:text-lg">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Semper eu scelerisque.
-                  </p>
-                </div>
-              </div>
-              <div class="flex gap-4">
-                <div>
-                  <img src="assets/panel.svg" alt="" class="features_icon" />
-                </div>
-                <div>
-                  <h3 class="features_title">Panel</h3>
-                  <p class="text-gray-400 font-light text-md md:text-lg">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Semper eu scelerisque.
-                  </p>
-                </div>
-              </div>
-              <div class="flex gap-4">
-                <div>
-                  <img
-                    src="assets/multi_window.svg"
-                    alt=""
-                    class="features_icon"
-                  />
-                </div>
-                <div>
-                  <h3 class="features_title">Multi-window</h3>
-                  <p class="text-gray-400 font-light text-md md:text-lg">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Semper eu scelerisque.
-                  </p>
-                </div>
-              </div>
-              <div class="flex gap-4">
-                <div>
-                  <img src="assets/tabbed.svg" alt="" class="features_icon" />
-                </div>
-                <div>
-                  <h3 class="features_title">Tabbed</h3>
-                  <p class="text-gray-400 font-light text-base md:text-lg">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Semper eu scelerisque.
-                  </p>
-                </div>
-              </div>
-              <div class="flex gap-4">
-                <div>
-                  <img src="assets/tray.svg" alt="" class="features_icon" />
-                </div>
-                <div>
-                  <h3 class="features_title">Tray</h3>
-                  <p class="text-gray-400 font-light text-md md:text-lg">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Semper eu scelerisque.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="order-first md:order-last mb-8 md:mb-0">
-              <div class="features_gradient_right"></div>
-              <img src="assets/features_video.png" alt="" />
-            </div>
-          </div>
-        </section>
       </div>
-      <!-- Bootstrap -->
-      <section class="bg-blue-50/50 mb-24">
-        <div class="container mx-auto mt-16 p-4">
-          <div class="flex flex-col md:flex-row gap-8 md:gap-4 mt-8">
-            <div class="flex flex-col gap-4">
-              <div
-                class="bg-blue-100/75 px-6 py-1.5 text-gray-700 rounded-full w-fit font-medium"
-              >
-                Step 1
-              </div>
-              <div class="text-4xl my-2 font-bold">Bootstrap</div>
-              <div class="text-gray-500 font-light text-md md:text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </div>
-            </div>
-            <div>
-              <div class="p-6 bg-white rounded-2xl">
-                <p class="text-gray-500">
-                  We budgeted for 2 full-time devs to work on our desktop app.
-                  We just got all that dev time back.
-                </p>
-                <p class="mt-2 mb-6 text-gray-500">
-                  Our app is rock-solid and has a ton of native functionality
-                  that would have taken us months to implement.
-                </p>
-                <div class="flex gap-4">
-                  <div>
-                    <img src="assets/zeb_evans.png" alt="" />
-                  </div>
-                  <div>
-                    <h4 class="text-xl">Zeb Evans</h4>
-                    <small class="text-gray-500 flex items-center"
-                      >Founder/CEO of ClickUp
-                      <span class="inline-block ml-2">
-                        <img src="assets/founder.svg" alt="" />
-                      </span>
-                    </small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img
-              src="assets/bootstrap_video.png"
-              alt=""
-              class="pt-6 md:py-2 bootstrap_video"
-            />
-          </div>
-        </div>
-      </section>
+      <div class="blur-3xl absolute -bottom-24 md:top-12 right-0">
+        <svg height="500" width="500">
+          <circle cx="400" cy="200" r="200" fill="#e0e7ff" />
+        </svg>
+      </div>
+      <!-- Hero End -->
     </main>
     <script src="main.js"></script>
   </body>
