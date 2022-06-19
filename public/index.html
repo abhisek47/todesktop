@@ -818,17 +818,60 @@
       <!-- Benefits Section End -->
       <!-- Package Section Start -->
       <section class="relative">
-        <div class="bg-blue-50/50 mt-24">
+        <div class="bg-blue-50/50 mt-24 pb-12">
           <div class="container mx-auto p-4">
             <h1 class="text-4xl text-center font-bold mt-8">
               Choose the package that works for you
             </h1>
-            <div></div>
+            <div>
+              <!-- Offer button start -->
+              <div class="flex justify-center mt-8 ml-44">
+                <div
+                  class="bg-blue-100 text-md px-4 py-1.5 font-bold w-fit rounded-full text-blue-600"
+                >
+                  20% OFF
+                </div>
+              </div>
+              <!-- Offer button end -->
+              <!-- Offer arrow start -->
+              <div class="absolute inset-x-2/4">
+                <svg
+                  width="25"
+                  height="44"
+                  viewBox="0 0 25 44"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="ml-32"
+                >
+                  <path
+                    d="M2.78846 37.9146L1 40.8953L3.38462 43.2799"
+                    stroke="#006DF6"
+                    stroke-width="1.19231"
+                  />
+                  <path
+                    d="M14 0.914551C23 3.91455 26.9987 18.1947 22.5 23.9146C19.7472 27.4146 13.6923 26.2992 12.5 23.9146C11.3077 21.5299 13.9231 19.9338 17.5 22.9146C21.0769 25.8953 17.0962 40.3184 1 40.9146"
+                    stroke="#006DF6"
+                    stroke-width="1.19231"
+                  />
+                </svg>
+              </div>
+              <!-- Offer arrow end -->
+              <div class="flex gap-4 items-center justify-center pt-6">
+                <div class="text-2xl font-medium text-slate-900">Monthy</div>
+                <div>
+                  <label class="switch">
+                    <input type="checkbox" checked />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+                <div class="text-2xl font-medium text-slate-500">Yearly</div>
+              </div>
+            </div>
             <div
               class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-2 lg:gap-6 items-center mt-12"
             >
               <!-- Essentials -->
-              <div class="p-6 bg-white rounded-xl">
+              <div class="p-6 bg-white rounded-xl pricing_box">
                 <div class="flex items-center gap-2">
                   <div>
                     <svg
@@ -867,19 +910,35 @@
                   </div>
                   <div class="flex gap-2 items-start">
                     <img src="assets/check_icon.svg" alt="" />
-                    <p class="publish_list_title">Native notifications</p>
+                    <p
+                      class="text-black border-dashed border-b-2 border-gray-600 hover:border-solid"
+                    >
+                      <a href="#"> Native notifications </a>
+                    </p>
                   </div>
                   <div class="flex gap-2 items-start">
                     <img src="assets/check_icon.svg" alt="" />
-                    <p class="publish_list_title">Auto-updates</p>
+                    <p
+                      class="text-black border-dashed border-b-2 border-gray-600 hover:border-solid"
+                    >
+                      <a href="#"> Auto-updates </a>
+                    </p>
                   </div>
                   <div class="flex gap-2 items-start">
                     <img src="assets/check_icon.svg" alt="" />
-                    <p class="publish_list_title">Code signing</p>
+                    <p
+                      class="text-black border-dashed border-b-2 border-gray-600 hover:border-solid"
+                    >
+                      <a href="#"> Code signing </a>
+                    </p>
                   </div>
                   <div class="flex gap-2 items-start">
                     <img src="assets/check_icon.svg" alt="" />
-                    <p class="publish_list_title">Native installers</p>
+                    <p
+                      class="text-black border-dashed border-b-2 border-gray-600 hover:border-solid"
+                    >
+                      <a href="#"> Native installers </a>
+                    </p>
                   </div>
                 </div>
                 <div class="flex gap-2 mt-6 items-center">
@@ -899,7 +958,7 @@
                   </div>
                   <div class="text-gray-400">Show 6 more features</div>
                 </div>
-                <div class="mt-8">
+                <div class="pt-8 pb-4">
                   <button
                     class="w-full text-center border-2 border-blue-400 text-blue-500 p-2 rounded-lg"
                   >
@@ -908,40 +967,47 @@
                 </div>
               </div>
               <!-- Professional -->
-              <div class="p-6 bg-slate-900 rounded-xl">
-                <div class="flex items-center gap-2">
-                  <div>
-                    <svg
-                      width="24"
-                      height="25"
-                      viewBox="0 0 24 25"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M16.7002 19.4794H7.3002C6.8802 19.4794 6.4102 19.1494 6.2702 18.7494L2.1302 7.16937C1.5402 5.50938 2.2302 4.99937 3.6502 6.01937L7.5502 8.80938C8.2002 9.25937 8.9402 9.02937 9.2202 8.29937L10.9802 3.60937C11.5402 2.10938 12.4702 2.10938 13.0302 3.60937L14.7902 8.29937C15.0702 9.02937 15.8102 9.25937 16.4502 8.80938L20.1102 6.19937C21.6702 5.07937 22.4202 5.64938 21.7802 7.45937L17.7402 18.7694C17.5902 19.1494 17.1202 19.4794 16.7002 19.4794Z"
-                        stroke="#006DF6"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M6.5 22.499H17.5"
-                        stroke="#006DF6"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M9.50098 14.5H14.501"
-                        stroke="#006DF6"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
+              <div class="p-6 bg-slate-900 rounded-xl pricing_box">
+                <div class="flex justify-between items-center">
+                  <div class="flex items-center gap-2">
+                    <div>
+                      <svg
+                        width="24"
+                        height="25"
+                        viewBox="0 0 24 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M16.7002 19.4794H7.3002C6.8802 19.4794 6.4102 19.1494 6.2702 18.7494L2.1302 7.16937C1.5402 5.50938 2.2302 4.99937 3.6502 6.01937L7.5502 8.80938C8.2002 9.25937 8.9402 9.02937 9.2202 8.29937L10.9802 3.60937C11.5402 2.10938 12.4702 2.10938 13.0302 3.60937L14.7902 8.29937C15.0702 9.02937 15.8102 9.25937 16.4502 8.80938L20.1102 6.19937C21.6702 5.07937 22.4202 5.64938 21.7802 7.45937L17.7402 18.7694C17.5902 19.1494 17.1202 19.4794 16.7002 19.4794Z"
+                          stroke="#006DF6"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M6.5 22.499H17.5"
+                          stroke="#006DF6"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M9.50098 14.5H14.501"
+                          stroke="#006DF6"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="text-xl text-gray-50">Professional</div>
                   </div>
-                  <div class="text-xl text-gray-50">Professional</div>
+                  <div
+                    class="text-xs text-gray-50 px-4 py-1.5 border-2 border-blue-500/75 rounded-full bg-blue-900/50"
+                  >
+                    Popular
+                  </div>
                 </div>
                 <div
                   class="flex items-center gap-2 py-6 border-b-2 border-slate-600/50"
@@ -951,51 +1017,63 @@
                 </div>
                 <div class="flex flex-col gap-4 mt-10">
                   <div class="flex gap-2 items-start">
-                    <img src="assets/check_icon.svg" alt="" />
+                    <img src="assets/check_icon_fill.svg" alt="" />
                     <p class="professional_features_item">
                       Everything in Essential
                     </p>
                   </div>
                   <div class="flex gap-2 items-start">
-                    <img src="assets/check_icon.svg" alt="" />
+                    <img src="assets/check_icon_fill.svg" alt="" />
                     <p class="professional_features_item">7-day free trail</p>
                   </div>
                   <div class="flex gap-2 items-start">
-                    <img src="assets/check_icon.svg" alt="" />
+                    <img src="assets/plus_icon.svg" alt="" />
                     <p class="professional_features_item">
                       Prority support & onboarding
                     </p>
                   </div>
                   <div class="flex gap-2 items-start">
-                    <img src="assets/check_icon.svg" alt="" />
-                    <p class="professional_features_item">Lunch at startup</p>
+                    <img src="assets/plus_icon.svg" alt="" />
+                    <div
+                      class="text-gray-200 border-dashed border-b-2 border-gray-100/75 hover:border-solid"
+                    >
+                      <a href="#"> Lunch at startup </a>
+                    </div>
                   </div>
                   <div class="flex gap-2 items-start">
-                    <img src="assets/check_icon.svg" alt="" />
-                    <p class="professional_features_item">
-                      Windows, Mac & Linux
+                    <img src="assets/plus_icon.svg" alt="" />
+                    <p
+                      class="text-gray-200 border-dashed border-b-2 border-gray-100/75 hover:border-solid"
+                    >
+                      <a href="#"> App badges & label </a>
                     </p>
                   </div>
                   <div class="flex gap-2 items-start">
-                    <img src="assets/check_icon.svg" alt="" />
-                    <p class="professional_features_item">
-                      Native notifications
+                    <img src="assets/plus_icon.svg" alt="" />
+                    <p
+                      class="text-gray-200 border-dashed border-b-2 border-gray-100/75 hover:border-solid"
+                    >
+                      <a href="#"> Custom internal URLs </a>
                     </p>
                   </div>
                   <div class="flex gap-2 items-start">
-                    <img src="assets/check_icon.svg" alt="" />
-                    <p class="professional_features_item">Auto-updates</p>
+                    <img src="assets/plus_icon.svg" alt="" />
+                    <p class="professional_features_item">Custom User Agent</p>
                   </div>
                   <div class="flex gap-2 items-start">
-                    <img src="assets/check_icon.svg" alt="" />
-                    <p class="professional_features_item">Code signing</p>
+                    <img src="assets/plus_icon.svg" alt="" />
+                    <p class="professional_features_item">Fullscreen mode</p>
                   </div>
                   <div class="flex gap-2 items-start">
-                    <img src="assets/check_icon.svg" alt="" />
-                    <p class="professional_features_item">Native installers</p>
+                    <img src="assets/plus_icon.svg" alt="" />
+                    <p
+                      class="text-gray-200 border-dashed border-b-2 border-gray-100/75 hover:border-solid"
+                    >
+                      <a href="#"> App protocols & depplinking </a>
+                    </p>
                   </div>
                 </div>
-                <div class="flex gap-2 mt-6 items-center">
+                <div class="flex gap-2 mt-8 items-center">
                   <div>
                     <svg
                       width="7"
@@ -1006,13 +1084,13 @@
                     >
                       <path
                         d="M0.572523 11.527L6.90177 6.40472C7.03274 6.25749 7.03274 6.01877 6.90177 5.87153L0.572522 0.74939C0.361237 0.511862 -4.78997e-07 0.680016 -4.64309e-07 1.01602L-1.65136e-08 11.2604C-1.83089e-09 11.5963 0.361251 11.7645 0.572523 11.527Z"
-                        fill="#006DF6"
+                        fill="#fff"
                       />
                     </svg>
                   </div>
                   <div class="text-gray-400">Show 6 more features</div>
                 </div>
-                <div class="mt-8">
+                <div class="py-4">
                   <button
                     class="px-6 py-2.5 text-md rounded-md action_button text-gray-100 w-full mt-4"
                   >
@@ -1020,7 +1098,8 @@
                   </button>
                 </div>
               </div>
-              <div class="p-6 bg-white rounded-xl">
+              <!-- Enterprise -->
+              <div class="p-6 bg-white rounded-xl pricing_box">
                 <div class="flex items-center gap-2">
                   <div>
                     <svg
@@ -1031,39 +1110,73 @@
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M6.0901 13.9181H9.1801V21.1181C9.1801 22.7981 10.0901 23.1381 11.2001 21.8781L18.7701 13.2781C19.7001 12.2281 19.3101 11.3581 17.9001 11.3581H14.8101V4.15808C14.8101 2.47808 13.9001 2.13808 12.7901 3.39808L5.2201 11.9981C4.3001 13.0581 4.6901 13.9181 6.0901 13.9181Z"
+                        d="M12.4997 22.6385H4.07973C2.91973 22.6385 1.96973 21.7085 1.96973 20.5685V5.72853C1.96973 3.10853 3.91973 1.91853 6.30973 3.08853L10.7497 5.26853C11.7097 5.73853 12.4997 6.98853 12.4997 8.04853V22.6385Z"
                         stroke="#006DF6"
                         stroke-width="1.5"
-                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M21.97 15.6981V19.4781C21.97 21.6381 20.97 22.6381 18.81 22.6381H12.5V11.0581L12.97 11.1581L17.47 12.1681L19.5 12.6181C20.82 12.9081 21.9 13.5881 21.96 15.5081C21.97 15.5681 21.97 15.6281 21.97 15.6981Z"
+                        stroke="#006DF6"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M5.5 9.63818H8.97"
+                        stroke="#006DF6"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M5.5 13.6382H8.97"
+                        stroke="#006DF6"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M17.4697 12.1682V15.3882C17.4697 16.6282 16.4597 17.6382 15.2197 17.6382C13.9797 17.6382 12.9697 16.6282 12.9697 15.3882V11.1582L17.4697 12.1682Z"
+                        stroke="#006DF6"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M21.9597 15.5085C21.8997 16.6885 20.9197 17.6385 19.7197 17.6385C18.4797 17.6385 17.4697 16.6285 17.4697 15.3885V12.1685L19.4997 12.6185C20.8197 12.9085 21.8997 13.5885 21.9597 15.5085Z"
+                        stroke="#006DF6"
+                        stroke-width="1.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       />
                     </svg>
                   </div>
-                  <div class="text-xl">Esssentials</div>
+                  <div class="text-xl">Enterprise</div>
                 </div>
-                <div
-                  class="flex items-center gap-2 py-6 border-b-2 border-gray-200"
-                >
-                  <div class="text-4xl font-bold">$58</div>
-                  <div class="text-gray-500">/ month</div>
+                <div class="py-6 border-b-2">
+                  <div class="text-4xl font-bold">Contact us</div>
+                  <div class="text-gray-500 text-sm mt-1">
+                    Contact us to get the pricing for your enterprise
+                  </div>
                 </div>
                 <div class="flex flex-col gap-4 mt-10">
                   <div class="flex gap-2 items-start">
                     <img src="assets/check_icon.svg" alt="" />
-                    <p class="publish_list_title">7-day free trail</p>
+                    <p class="publish_list_title">Everything in Professional</p>
                   </div>
                   <div class="flex gap-2 items-start">
                     <img src="assets/check_icon.svg" alt="" />
-                    <p class="publish_list_title">Windows, Mac & Linux</p>
+                    <p class="publish_list_title">Dedicated account manager</p>
                   </div>
                   <div class="flex gap-2 items-start">
                     <img src="assets/check_icon.svg" alt="" />
-                    <p class="publish_list_title">Native notifications</p>
+                    <p class="publish_list_title">Custom features</p>
                   </div>
                   <div class="flex gap-2 items-start">
                     <img src="assets/check_icon.svg" alt="" />
-                    <p class="publish_list_title">Auto-updates</p>
+                    <p class="publish_list_title">Branded download links</p>
                   </div>
                   <div class="flex gap-2 items-start">
                     <img src="assets/check_icon.svg" alt="" />
@@ -1074,7 +1187,7 @@
                     <p class="publish_list_title">Native installers</p>
                   </div>
                 </div>
-                <div class="flex gap-2 mt-6 items-center">
+                <div class="flex gap-2 mt-6 items-center invisible">
                   <div>
                     <svg
                       width="7"
@@ -1091,7 +1204,7 @@
                   </div>
                   <div class="text-gray-400">Show 6 more features</div>
                 </div>
-                <div class="mt-8">
+                <div class="pt-8 pb-4">
                   <button
                     class="w-full text-center border-2 border-blue-400 text-blue-500 p-2 rounded-lg"
                   >
@@ -1104,6 +1217,128 @@
         </div>
       </section>
       <!-- Package Section End -->
+      <!-- FAQ Section Start -->
+      <section class="relative code">
+        <div class="container mx-auto mt-16 px-4">
+          <div class="text-center">
+            <h1 class="text-4xl text-center font-bold">
+              Frequently Asked Questions
+            </h1>
+            <p class="pt-4 text-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec,
+              tellus ultrices quam diam.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-14">
+            <div class="flex flex-col gap-4 md:gap-2">
+              <div class="border rounded-xl px-2 py-4">
+                <button class="accordion">Is ToDesktop For Me?</button>
+                <div class="panel">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </div>
+              <div class="border rounded-xl px-2 py-4">
+                <button class="accordion">
+                  How does ToDesktop work under the hood?
+                </button>
+                <div class="panel">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </div>
+              <div class="border rounded-xl px-2 py-4">
+                <button class="accordion">
+                  Can I try ToDesktop without buying?
+                </button>
+                <div class="panel">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </div>
+              <div class="border rounded-xl px-2 py-4">
+                <button class="accordion">
+                  I want to use ToDesktop to convert multiple web apps, is there
+                  a bulk discount available?
+                </button>
+                <div class="panel">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-4 md:gap-2">
+              <div class="border rounded-xl px-2 py-4">
+                <button class="accordion">
+                  Do you collect or store data about my customers?
+                </button>
+                <div class="panel">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </div>
+              <div class="border rounded-xl px-2 py-4">
+                <button class="accordion">Will my app work offline?</button>
+                <div class="panel">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </div>
+              <div class="border rounded-xl px-2 py-4">
+                <button class="accordion">
+                  Does ToDesktop work with sites built with ___?
+                </button>
+                <div class="panel">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </div>
+              <div class="border rounded-xl px-2 py-4">
+                <button class="accordion">
+                  Which version of Electron/Chromium is used?
+                </button>
+                <div class="panel">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FAQ Section End -->
     </main>
     <script src="main.js"></script>
   </body>
