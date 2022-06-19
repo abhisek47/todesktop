@@ -602,6 +602,10 @@ video {
   position: static;
 }
 
+.fixed{
+  position: fixed;
+}
+
 .absolute{
   position: absolute;
 }
@@ -623,6 +627,14 @@ video {
 .inset-x-2\/4{
   left: 50%;
   right: 50%;
+}
+
+.bottom-8{
+  bottom: 2rem;
+}
+
+.right-8{
+  right: 2rem;
 }
 
 .top-0{
@@ -677,12 +689,12 @@ video {
   left: 11rem;
 }
 
-.-z-10{
-  z-index: -10;
-}
-
 .z-20{
   z-index: 20;
+}
+
+.-z-10{
+  z-index: -10;
 }
 
 .order-first{
@@ -1373,6 +1385,7 @@ video {
 
 * {
   font-family: system-ui, -apple-system, 'SF Pro Display', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .action_button {
@@ -1394,7 +1407,6 @@ video {
   transition: 0.2s ease-in-out;
 }
 
-body,
 svg {
   overflow-x: hidden;
 }
@@ -1687,6 +1699,18 @@ input:checked + .slider:before {
 
 .footer_link_item:hover svg path {
   fill: lightgray;
+}
+
+#myBtn {
+  padding: 1rem 1.25rem;
+  background: linear-gradient(180deg, #5e83ff 0%, #2e33f1 100%);
+  border-radius: 50%;
+  display: none;
+  transition: 0.2 ease-in-out;
+}
+
+#myBtn:hover {
+  box-shadow: 0px 2.82857px 11.3143px rgba(54, 64, 244, 0.43);
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
