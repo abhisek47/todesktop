@@ -292,6 +292,19 @@ input:checked + .slider:before {
 }
 /* Subscribe end */
 
+.footer_link_item {
+  color: #909eb8;
+  transition: 0.2s ease-in-out;
+}
+
+.footer_link_item:hover {
+  color: lightgray;
+}
+
+.footer_link_item:hover svg path {
+  fill: lightgray;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .hero_banner {
     transform: scale(1.1);
