@@ -104,7 +104,7 @@ svg {
   box-shadow: 0px 11.4462px 18.3139px rgba(87, 120, 254, 0.35);
 }
 
-.code > button:hover {
+.read_more_btn:hover {
   box-shadow: 0px 11.4462px 18.3139px rgba(87, 120, 254, 0.35);
 }
 
@@ -275,13 +275,22 @@ input:checked + .slider:before {
 
 .panel {
   padding: 0 18px;
-  background-color: white;
+  /* background-color: white; */
   height: 0;
   overflow: hidden;
   color: #777;
   transition: height 0.2s ease-out;
 }
 /* FAQ accordian end */
+
+/* Subscribe start */
+.subs_bg {
+  background: url('assets/subscribe_bg.png') no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+/* Subscribe end */
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .hero_banner {
@@ -309,6 +318,12 @@ input:checked + .slider:before {
     object-fit: cover;
     object-position: 2% 0;
     margin-top: 2rem;
+  }
+  .subs_bg {
+    background: url('assets/subs_bg_tab.png') no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
   }
 }
 
@@ -365,5 +380,11 @@ input:checked + .slider:before {
   }
   .nav_item {
     display: none;
+  }
+  .subs_bg {
+    background: url('assets/subs_bg_mobile.png') no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
   }
 }
