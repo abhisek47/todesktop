@@ -283,7 +283,10 @@
             <h1 class="text-4xl text-center font-bold">
               Types of apps you can build with ToDesktop
             </h1>
-            <div class="flex flex-col md:flex-row gap-8 items-start mt-16" style="height: auto">
+            <div
+              class="flex flex-col md:flex-row gap-8 items-start mt-16"
+              style="height: auto"
+            >
               <div class="flex flex-col gap-12 feature_container">
                 <div class="features_item sticky">
                   <div class="svg_icon">
@@ -325,7 +328,10 @@
                   <div>
                     <h3 class="features_title">Web app → Desktop app</h3>
                     <p class="text-gray-400 font-light text-md md:text-lg">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo neque fuga quod libero quia dicta sint, tenetur excepturi harum? Ad illum incidunt nostrum repellat tempore delectus ipsum qui quis error.
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Quo neque fuga quod libero quia dicta sint, tenetur
+                      excepturi harum? Ad illum incidunt nostrum repellat
+                      tempore delectus ipsum qui quis error.
                     </p>
                   </div>
                 </div>
@@ -357,7 +363,10 @@
                   <div>
                     <h3 class="features_title">Native Notifications</h3>
                     <p class="text-gray-400 font-light text-md md:text-lg">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo neque fuga quod libero quia dicta sint, tenetur excepturi harum? Ad illum incidunt nostrum repellat tempore delectus ipsum qui quis error.
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Quo neque fuga quod libero quia dicta sint, tenetur
+                      excepturi harum? Ad illum incidunt nostrum repellat
+                      tempore delectus ipsum qui quis error.
                     </p>
                   </div>
                 </div>
@@ -382,7 +391,10 @@
                   <div>
                     <h3 class="features_title">Panel</h3>
                     <p class="text-gray-400 font-light text-md md:text-lg">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo neque fuga quod libero quia dicta sint, tenetur excepturi harum? Ad illum incidunt nostrum repellat tempore delectus ipsum qui quis error.
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Quo neque fuga quod libero quia dicta sint, tenetur
+                      excepturi harum? Ad illum incidunt nostrum repellat
+                      tempore delectus ipsum qui quis error.
                     </p>
                   </div>
                 </div>
@@ -421,7 +433,10 @@
                   <div>
                     <h3 class="features_title">Multi-window</h3>
                     <p class="text-gray-400 font-light text-md md:text-lg">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo neque fuga quod libero quia dicta sint, tenetur excepturi harum? Ad illum incidunt nostrum repellat tempore delectus ipsum qui quis error.
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Quo neque fuga quod libero quia dicta sint, tenetur
+                      excepturi harum? Ad illum incidunt nostrum repellat
+                      tempore delectus ipsum qui quis error.
                     </p>
                   </div>
                 </div>
@@ -467,7 +482,10 @@
                   <div>
                     <h3 class="features_title">Tabbed</h3>
                     <p class="text-gray-400 font-light text-base md:text-lg">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo neque fuga quod libero quia dicta sint, tenetur excepturi harum? Ad illum incidunt nostrum repellat tempore delectus ipsum qui quis error.
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Quo neque fuga quod libero quia dicta sint, tenetur
+                      excepturi harum? Ad illum incidunt nostrum repellat
+                      tempore delectus ipsum qui quis error.
                     </p>
                   </div>
                 </div>
@@ -517,20 +535,20 @@
                   <div>
                     <h3 class="features_title">Tray</h3>
                     <p class="text-gray-400 font-light text-md md:text-lg">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo neque fuga quod libero quia dicta sint, tenetur excepturi harum? Ad illum incidunt nostrum repellat tempore delectus ipsum qui quis error.
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Quo neque fuga quod libero quia dicta sint, tenetur
+                      excepturi harum? Ad illum incidunt nostrum repellat
+                      tempore delectus ipsum qui quis error.
                     </p>
                   </div>
                 </div>
               </div>
               <div id="setHight"></div>
               <div class="js-sticky-widget absolute">
-              <video id="v0" tabindex="0" autobuffer preload >
-                <source type="video/mp4" src="videos/todesktop-vid.mp4"></source>
-              </video>
-            </div>
-              <!-- <div class="order-first md:order-last mb-8 md:mb-0">
-                <img src="assets/features_video.png" alt="" />
-              </div> -->
+                <video id="v0" tabindex="0" autobuffer preload>
+                  <source type="video/mp4" src="videos/todesktop-vid.mp4" />
+                </video>
+              </div>
             </div>
           </section>
         </div>
@@ -1610,12 +1628,12 @@
     <script src="main.js"></script>
     <script>
       var stickyEl = new Sticksy('.js-sticky-widget', {
-				topSpacing: 60,
-			})
-			stickyEl.onStateChanged = function (state) {
-				if (state === 'fixed') stickyEl.nodeRef.classList.add('widget--sticky')
-				else stickyEl.nodeRef.classList.remove('widget--sticky')
-			}
+        topSpacing: 60
+      })
+      stickyEl.onStateChanged = function (state) {
+        if (state === 'fixed') stickyEl.nodeRef.classList.add('widget--sticky')
+        else stickyEl.nodeRef.classList.remove('widget--sticky')
+      }
     </script>
   </body>
 </html>
