@@ -43,7 +43,7 @@
       <div class="container mx-auto">
         <section class="flex justify-between items-center p-4">
           <div class="flex gap-8 items-center">
-            <img src="assets/logo.svg" alt="logo" class="w-32" />
+            <img src="assets/logo.svg" alt="logo" class="w-36" />
             <div class="hidden md:block w-0.5 h-8 bg-gray-300"></div>
             <div class="nav_item">
               <a href="#">Docs</a>
@@ -72,6 +72,84 @@
                   style="transform: scale(1.8)"
                 />
               </div>
+            </div>
+            <div class="hidden">
+              <svg
+                width="30"
+                height="23"
+                viewBox="0 0 30 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="0.828964"
+                  width="30"
+                  height="2.5"
+                  rx="1.25"
+                  fill="#040E20"
+                />
+                <rect
+                  y="10.329"
+                  width="30"
+                  height="2.5"
+                  rx="1.25"
+                  fill="#040E20"
+                />
+                <rect
+                  y="19.829"
+                  width="30"
+                  height="2.5"
+                  rx="1.25"
+                  fill="#040E20"
+                />
+              </svg>
+            </div>
+            <div class="md:hidden">
+              <input
+                id="page-nav-toggle"
+                class="main-navigation-toggle"
+                type="checkbox"
+              />
+              <label for="page-nav-toggle">
+                <svg class="icon--menu-toggle" viewBox="0 0 60 30">
+                  <g class="icon-group">
+                    <g class="icon--menu">
+                      <path d="M 6 15 L 54 15" />
+                      <path d="M 6 30 L 54 30" />
+                      <path d="M 6 45 L 54 45" />
+                    </g>
+                    <g class="icon--close">
+                      <path d="M 15 0 L 45 30" />
+                      <path d="M 15 30 L 45 0" />
+                    </g>
+                  </g>
+                </svg>
+              </label>
+
+              <nav class="main-navigation">
+                <ul>
+                  <li><a href="#0">Docs</a></li>
+                  <li><a href="#0">Login</a></li>
+                  <li><a href="#0">Signup</a></li>
+                  <li><a href="#0">ToDesktop for Electron Developers</a></li>
+                </ul>
+                <!-- <div class="px-16 py-12 text-gray-200 left-12">
+                  <div class="flex gap-8 flex-col">
+                    <p class="text-2xl">
+                      <a href="#"> Docs </a>
+                    </p>
+                    <p class="text-2xl">
+                      <a href="#"> Login </a>
+                    </p>
+                    <p class="text-2xl">
+                      <a href="#"> Signup </a>
+                    </p>
+                    <p class="text-2xl">
+                      <a href="#"> ToDesktop for Electron Developers </a>
+                    </p>
+                  </div>
+                </div> -->
+              </nav>
             </div>
           </div>
         </section>
@@ -606,7 +684,7 @@
                   </div>
                 </div>
                 <button
-                  class="px-6 py-2.5 text-md rounded-md action_button text-gray-100 w-fit mt-4 read_more_btn"
+                  class="px-6 py-2.5 text-md rounded-md action_button text-gray-100 w-max mt-4 read_more_btn"
                 >
                   Read our docs
                 </button>
