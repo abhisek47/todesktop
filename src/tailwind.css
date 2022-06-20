@@ -29,7 +29,7 @@
 .main-navigation-toggle + label {
   position: absolute;
   top: 0;
-  right: 20px;
+  right: 18px;
   cursor: pointer;
   z-index: 25;
 }
@@ -309,17 +309,30 @@ svg {
 }
 
 .code_list_title {
-  border-bottom: 1px dashed #777;
+  border-bottom: 1px dotted #777;
   border-bottom-width: 2px;
+}
+
+.code_bar {
+  width: 500px;
+  padding: 4rem 0;
+  margin-top: -3.2rem;
+  background: rgba(245, 245, 245, 0.15);
+  background-blend-mode: luminosity;
+  border: 1px solid #fff;
+  box-shadow: 0px 3.8254px 23.9087px rgba(0, 0, 0, 0.13);
+  backdrop-filter: blur(34.0111px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 10.2465px;
+  object-fit: cover;
+  object-position: 0% 0;
 }
 
 .code_image {
   width: 500px;
   height: 200px;
   position: absolute;
-  bottom: -50px;
-  object-fit: cover;
-  object-position: 10% 0;
+  bottom: -8px;
 }
 
 .nav_item {
@@ -368,7 +381,6 @@ svg {
   object-fit: cover;
   object-position: 2% 0;
   margin-top: 2rem;
-  /* filter: drop-shadow(0px -20px 65px rgba(74, 74, 74, 0.12)); */
 }
 
 .features_container {
@@ -422,7 +434,7 @@ svg {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #006df6;
+  background: #2ad787;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   box-shadow: 0px 8px 11px rgba(0, 109, 246, 0.17);
@@ -470,14 +482,14 @@ input:checked + .slider:before {
 /* FAQ accordian start */
 .accordion {
   /* background-color: #eee; */
-  color: #444;
+  color: rgb(0, 0, 0);
   cursor: pointer;
   padding: 10px 18px;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   transition: 0.4s;
   display: flex;
@@ -510,7 +522,7 @@ input:checked + .slider:before {
   /* background-color: white; */
   height: 0;
   overflow: hidden;
-  color: #777;
+  color: #6d7d99;
   transition: height 0.2s ease-out;
 }
 /* FAQ accordian end */
@@ -538,10 +550,13 @@ input:checked + .slider:before {
 }
 
 #myBtn {
-  padding: 1rem 1.25rem;
+  width: 55px;
+  height: 55px;
   background: linear-gradient(180deg, #5e83ff 0%, #2e33f1 100%);
   border-radius: 50%;
   display: none;
+  align-items: center;
+  justify-content: center;
   transition: 0.2 ease-in-out;
 }
 
@@ -557,6 +572,20 @@ input:checked + .slider:before {
 .features_item {
   width: 500px;
   margin: 50px 0;
+}
+
+#video {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background: linear-gradient(180deg, #5e83ff 0%, #2e33f1 100%);
+  backdrop-filter: blur(3.88075px);
+}
+
+#video svg {
+  width: 24px;
 }
 
 /* .features_item:nth-of-type(1) {
@@ -578,6 +607,19 @@ input:checked + .slider:before {
   height: 4000px;
 } */
 
+.check_icon {
+  padding-top: 0.2rem;
+}
+
+.price_btn_light {
+  background: linear-gradient(180deg, #5e83ff 0%, #2e33f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 500;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .hero_banner {
     transform: scale(1.1);
@@ -586,11 +628,13 @@ input:checked + .slider:before {
     left: 35%;
   }
   .code_image {
-    width: 40%;
-    height: 120px;
-    top: 70%;
-    object-fit: cover;
-    object-position: 40% 0;
+    width: 100%;
+    height: 140px;
+    top: -45%;
+  }
+  .code_bar {
+    width: 400px;
+    padding: 3.2rem 0;
   }
   .downloading_image {
     width: 810px;
@@ -618,6 +662,15 @@ input:checked + .slider:before {
 }
 
 @media screen and (max-width: 767px) {
+  #video {
+    width: 70px;
+    height: 70px;
+    margin-right: 8.5rem;
+    margin-bottom: 1rem;
+  }
+  #video svg {
+    width: 16px;
+  }
   #v0 {
     width: 100%;
     margin: 0 auto;
@@ -656,6 +709,7 @@ input:checked + .slider:before {
     object-fit: cover;
     object-position: -14% 0;
     margin-bottom: 2rem;
+    filter: drop-shadow(0px 0px 32.0125px rgba(0, 19, 41, 0.12));
   }
   .code_image {
     width: 100%;
@@ -674,7 +728,7 @@ input:checked + .slider:before {
     object-position: -40% 0;
   }
   .our_installer_right {
-    top: 50%;
+    top: 48%;
   }
   .nav_item {
     display: none;
@@ -687,6 +741,23 @@ input:checked + .slider:before {
   }
   .feature_container {
     margin-top: 200px;
+  }
+
+  .sub {
+    width: 300px;
+  }
+
+  .features_container:hover {
+    box-shadow: none;
+  }
+
+  .features_container {
+    box-shadow: 0px 6px 20px rgba(0, 19, 41, 0.09);
+  }
+
+  .code_bar {
+    width: 250px;
+    padding: 2rem 0;
   }
 }
 
