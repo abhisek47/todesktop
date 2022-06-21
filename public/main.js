@@ -135,7 +135,7 @@ function buttonEvents(e) {
       break
     case 'tray':
       timeStart = 19
-      timeEnd = 24
+      timeEnd = 23.99
   }
 
   /* call 'playVideo()' */
@@ -145,8 +145,8 @@ function buttonEvents(e) {
 function playVideo(startTime, endTime) {
   function checkTime() {
     if (myvideo.currentTime >= endTime) {
-      myvideo.currentTime = startTime
-      // myvideo.pause()
+      // myvideo.currentTime = startTime
+      myvideo.pause()
     } else {
       /* call checkTime every 1/10th 
           second until endTime */
