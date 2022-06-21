@@ -347,11 +347,9 @@
               Types of apps you can build with ToDesktop
             </h1>
             <div
-              class="flex flex-col md:flex-row gap-8 items-start mt-16"
-              style="height: auto"
+              class="flex flex-col md:flex-row gap-8 items-start mt-16 wrapper"
             >
-              <div id="setHight"></div>
-              <div class="flex flex-col gap-12 feature_container">
+              <div class="flex flex-col gap-12 feature_container h-max">
                 <div class="features_item">
                   <div class="svg_icon">
                     <svg
@@ -607,8 +605,8 @@
                   </div>
                 </div>
               </div>
-              <div class="js-sticky-widget absolute">
-                <video id="v0" tabindex="0" autobuffer preload>
+              <div class="js-sticky-widget features–video">
+                <video id="v0" preload muted>
                   <source type="video/mp4" src="videos/todesktop-vid.mp4" />
                 </video>
               </div>
@@ -867,7 +865,7 @@
                   <div class="w-full h-32 md:h-44 lg:h-44 xl:h-56 mt-4">
                     <div class="absolute">
                       <img
-                        src="assets/downloading.png"
+                        src="assets/downloading.svg"
                         alt=""
                         class="downloading_image overflow-hidden"
                       />
@@ -1625,7 +1623,9 @@
                     <p class="publish_list_title">Native installers</p>
                   </div>
                 </div>
-                <div class="flex gap-4 mt-6 pl-1 items-center hidden md:invisible lg:block">
+                <div
+                  class="flex gap-4 mt-6 pl-1 items-center hidden md:invisible lg:block"
+                >
                   <div>
                     <svg
                       width="7"
