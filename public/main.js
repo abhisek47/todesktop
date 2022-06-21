@@ -155,7 +155,7 @@ function playVideo(startTime, endTime) {
   }
 
   /* stop if playing (otherwise ignored) */
-  myvideo.pause()
+  // myvideo.pause()
   /* set video start time */
   myvideo.currentTime = startTime
   /* play video */
