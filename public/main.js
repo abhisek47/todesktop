@@ -82,69 +82,85 @@ checkbox.addEventListener('change', (event) => {
 
 // Video play
 
-// var frameNumber = 0, // start video at frame 0
-//   // lower numbers = faster playback
-//   playbackConst = 1000,
-//   // get page height from video duration
-//   setHeight = document.getElementById('setHeight'),
-//   // select video element
-//   vid = document.getElementById('v0')
-// // var vid = $('#v0')[0]; // jquery option
+var myvideo = document.getElementById('v0')
 
-// // dynamically set the page height according to video length
-// vid.addEventListener('loadedmetadata', function () {
-//   setHeight.style.height = Math.floor(vid.duration) * playbackConst + 'px'
-// })
+/* add the same event and 
+   handler function to each 
+   of the three buttons */
+var buttons = [
+  'webApp',
+  'nativeNotification',
+  'panel',
+  'multiWindow',
+  'tabbed',
+  'tray'
+]
 
-// // Use requestAnimationFrame for smooth playback
-// function scrollPlay() {
-//   var frameNumber = window.pageYOffset / playbackConst
-//   vid.currentTime = frameNumber
-//   window.requestAnimationFrame(scrollPlay)
-// }
-
-// window.requestAnimationFrame(scrollPlay)
-
-// window.onload = function () {
-//   let options = {
-//     root: null,
-//     rootMargin: '0px',
-//     threashold: 1.0
-//   }
-//   let callback = (entries, observer) => {
-//     entries.foEach((entry) => {
-//       if (entry.target.id === 'v0') {
-//         if (entry.isIntersecting) {
-//           entry.target.play()
-//         } else {
-//           entry.target.pause()
-//         }
-//       }
-//     })
-//   }
-//   let observer = new IntersectionObserver(callback, options)
-//   observer.observe(document.getElementById('v0'))
-
-const vd = document.getElementById('v0')
-
-// $(document).ready(function () {
-//   $('.features_item').scrollTop(function () {
-//     vd.play()
-//   })
-// })
-
-// $(document).ready(function () {
-//   $('.feature_container').scroll(function () {
-//     if ($(this).scrollTop() > 50) {
-//       vd.play()
-//     }
-//   })
-// })
-
-$(window).scroll(function () {
-  const pos = $(window).scrollTop()
-  console.log(pos)
-  if ($(this).scrollTop() > 500) {
-    vd.play()
-  }
+buttons.forEach(function (bn) {
+  document.getElementById(bn).addEventListener('mouseenter', buttonEvents, !1)
 })
+
+function buttonEvents(e) {
+  /* get the id of the clicked button */
+  var element_id = e.target.id
+  /* E.G. element_id = 'playme', 'jump', or 'jump2' */
+
+  /* declare variables before setting them */
+  var timeStart = 0
+  var timeEnd = 0
+
+  /* set start and end values depending 
+       on which button was clicked */
+  switch (element_id) {
+    case 'webApp':
+      /* example values... */
+      timeStart = 0
+      timeEnd = 4.65
+      break
+    case 'nativeNotification':
+      timeStart = 4.65
+      timeEnd = 5.9
+      break
+    case 'panel':
+      timeStart = 13.15
+      timeEnd = 17
+      break
+    case 'multiWindow':
+      timeStart = 16
+      timeEnd = 19
+      break
+    case 'tabbed':
+      timeStart = 6.02
+      timeEnd = 13
+      break
+    case 'tray':
+      timeStart = 19
+      timeEnd = 24
+  }
+
+  /* call 'playVideo()' */
+  playVideo(timeStart, timeEnd)
+}
+
+function playVideo(startTime, endTime) {
+  function checkTime() {
+    if (myvideo.currentTime >= endTime) {
+      myvideo.currentTime = startTime
+      // myvideo.pause()
+    } else {
+      /* call checkTime every 1/10th 
+          second until endTime */
+      setTimeout(checkTime, 100)
+    }
+  }
+
+  /* stop if playing (otherwise ignored) */
+  myvideo.pause()
+  /* set video start time */
+  myvideo.currentTime = startTime
+  /* play video */
+  myvideo.play()
+  /* check the current time and 
+   pause IF/WHEN endTime is reached */
+  checkTime()
+}
