@@ -97,7 +97,7 @@ var buttons = [
 ]
 
 buttons.forEach(function (bn) {
-  document.getElementById(bn).addEventListener('mouseenter', buttonEvents, !1)
+  document.getElementById(bn).addEventListener('hover', buttonEvents, !1)
 })
 
 function buttonEvents(e) {
@@ -155,7 +155,7 @@ function playVideo(startTime, endTime) {
   }
 
   /* stop if playing (otherwise ignored) */
-  // myvideo.pause()
+  myvideo.pause()
   /* set video start time */
   myvideo.currentTime = startTime
   /* play video */

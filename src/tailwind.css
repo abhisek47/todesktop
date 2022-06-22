@@ -282,7 +282,7 @@ svg {
   display: flex;
   align-items: flex-start;
   cursor: pointer;
-  gap: 1rem; /* 16px */
+
 }
 
 .features_title {
