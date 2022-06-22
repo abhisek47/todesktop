@@ -10,167 +10,205 @@
     <link rel="stylesheet" href="video.popup.css" />
   </head>
   <style>
-    /* main {
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .app_icons {
+      flex: 5;
+      position: relative;
     }
-    .todesktop_ui {
-      width: 1200px;
-      height: 580px;
-      background-color: #efedef;
-      border: 6.03015px solid #fffafa;
-      border-radius: 13.2049px;
-      filter: drop-shadow(0px 0px 45px rgba(0, 0, 0, 0.1));
-    } */
+    .overflows {
+      transform: scale(0.8);
+      width: 49vw;
+      height: 95%;
+      height: 95%;
+      display: grid;
+      grid-template-columns: repeat(5, 20%);
+    }
+
+    span {
+      position: relative;
+    }
+
+    span:nth-child(6) img,
+    span:nth-child(7) img,
+    span:nth-child(8) img,
+    span:nth-child(9) img,
+    span:nth-child(10) img,
+    span:nth-child(16) img,
+    span:nth-child(17) img,
+    span:nth-child(18) img,
+    span:nth-child(19) img,
+    span:nth-child(20) img {
+      margin-left: 80px;
+    }
+
+    @media screen and (max-width: 767px) {
+      span:nth-child(6) img,
+      span:nth-child(7) img,
+      span:nth-child(8) img,
+      span:nth-child(9) img,
+      span:nth-child(10) img,
+      span:nth-child(16) img,
+      span:nth-child(17) img,
+      span:nth-child(18) img,
+      span:nth-child(19) img,
+      span:nth-child(20) img {
+        margin-left: 30px;
+      }
+    }
+    .app_icons img {
+      width: 90%;
+    }
+    .our-customers {
+      position: absolute;
+      left: -100%;
+      width: 100%;
+      top: 10%;
+    }
   </style>
   <body>
-    <main>
-      <video id="myvideo" width="600">
-        <source src="videos/todesktop-vid.mp4" type="video/mp4" />
-      </video>
-      <div>
-        <p>
-          <button id="playme">Play/Pause Video</button>
-        </p>
-        <p>
-          <button id="jump">Jump to 4 seconds</button>
-        </p>
-        <p>
-          <button id="jump2">Jump to 11 seconds</button>
-        </p>
-      </div>
-      <!-- <section class="todesktop_ui" style="object-fit: cover">
-        <div class="flex items-center border-b-2 w-full">
-          <div class="flex gap-4 w-fit items-center border-r-2 p-3 w-3/12">
-            <div class="flex space-x-2.5 items-center">
-              <div class="w-3.5 h-3.5 rounded-full bg-red-500"></div>
-              <div class="w-3.5 h-3.5 rounded-full bg-yellow-400"></div>
-              <div class="w-3.5 h-3.5 rounded-full bg-green-500"></div>
-            </div>
-            <div class="flex items-center space-x-2">
-              <div>
-                <img src="assets/zeb_evans.png" alt="" class="w-8 h-8" />
-              </div>
-              <div class="text-gray-500 font-medium">Dave Jeffery</div>
-            </div>
-          </div>
-          <div class="p-3 flex justify-center w-9/12 relative">
-            <div class="absolute left-4">X</div>
-            <p>ClickUp</p>
-          </div>
-        </div>
-        <div class="flex items-start border-b-2 w-full h-screen">
-          <div class="border-r-2 p-3 w-3/12">
-            <div class="pl-4">Builder</div>
-            <div class="flex flex-col gap-0 mt-2">
-              <div class="py-3 rounded-md px-4 bg-blue-500 text-gray-100">
-                App
-              </div>
-              <div class="py-3 rounded-md px-4">Windows</div>
-              <div class="py-3 rounded-md px-4">Menus</div>
-              <div class="py-3 rounded-md px-4">Tray</div>
-              <div class="py-3 rounded-md px-4">Plugin</div>
-            </div>
-          </div>
-          <div class="py-6 px-5 grid grid-cols-2 gap-8 justify-center w-9/12">
-            <div class="py-4 bg-white rounded-md">
-              <h2 class="pt-2 pb-4 font-medium text-2xl border-b-2 px-5">
-                Application
-              </h2>
-              <div class="py-6 px-5 flex flex-col gap-2">
-                <h3>App Title</h3>
-                <input
-                  type="text"
-                  placeholder="ClickUp"
-                  class="w-full p-2 border-2 rounded-md"
-                />
-              </div>
-              <div class="px-5 flex flex-col gap-2">
-                <h3>App Icon</h3>
-                <div
-                  class="w-20 h-20 mt-2 border-2 border-dotted border-slate-300"
-                ></div>
-              </div>
-            </div>
-            <div class="p-4 bg-white rounded-md"></div>
-          </div>
-        </div>
-      </section> -->
-    </main>
+    <main class="flex items-center justify-center">
+      <div class="app-icons">
+        <div class="overflows gap-x-4 md:gap-x-12 gap-y-2">
+          <span>
+            <img src="assets/app-icons/linear.png" alt="Linear Icon" />
+          </span>
+          <span>
+            <img src="assets/app-icons/unbounce.png" alt="Unbounce Icon" />
+          </span>
+          <span>
+            <img src="assets/app-icons/voiceflow.png" alt="Voiceflow Icon" />
+          </span>
+          <span>
+            <img src="assets/app-icons/morgen.png" alt="Morgen Icon" />
+          </span>
 
+          <span>
+            <img
+              style="transform: scale(0.85)"
+              src="assets/app-icons/dark.png"
+              alt="Dark Icon"
+            />
+          </span>
+
+          <span>
+            <img src="assets/app-icons/clickup.png" alt="ClickUp Icon" />
+          </span>
+          <span>
+            <img src="assets/app-icons/cron.png" alt="Cron Icon" />
+          </span>
+          <span>
+            <img
+              style="transform: scale(0.95)"
+              src="assets/app-icons/beeper.png"
+              alt="Beeper Icon"
+            />
+          </span>
+
+          <span>
+            <img
+              style="transform: scale(0.95)"
+              src="assets/app-icons/bento.png"
+              alt="Bento Icon"
+            />
+          </span>
+
+          <span>
+            <img
+              style="transform: scale(0.9)"
+              src="assets/app-icons/gain.png"
+              alt="Gain Icon"
+            />
+          </span>
+
+          <span>
+            <img src="assets/app-icons/tandem.png" alt="Tandem Icon" />
+          </span>
+          <span>
+            <img src="assets/app-icons/sunsama.png" alt="Sunsama Icon" />
+          </span>
+          <span>
+            <img src="assets/app-icons/slapdash.png" alt="Slapdash Icon" />
+          </span>
+          <span>
+            <img
+              style="transform: scale(0.82)"
+              src="assets/app-icons/airtime.png"
+              alt="Airtime Icon"
+            />
+          </span>
+          <span>
+            <img src="assets/app-icons/clovis.png" alt="Clovis Icon" />
+          </span>
+
+          <span>
+            <img
+              src="assets/our-customers.svg"
+              class="our-customers"
+              alt="Arrows pointing to 'Our Customers'"
+            />
+            <img src="assets/app-icons/kitemaker.png" alt="Kitemaker Icon" />
+          </span>
+          <span>
+            <img
+              style="transform: scale(0.9)"
+              src="assets/app-icons/dex.png"
+              alt="Dex Icon"
+            />
+          </span>
+          <span>
+            <img
+              style="transform: scale(1.1)"
+              src="assets/app-icons/slite-new.png"
+              alt="Slite Icon"
+            />
+          </span>
+          <span>
+            <img
+              style="transform: scale(0.9)"
+              src="assets/app-icons/interplay.png"
+              alt="Interplay Icon"
+            />
+          </span>
+          <span>
+            <img src="assets/app-icons/milk.png" alt="Milk Icon" />
+          </span>
+
+          <span>
+            <img src="assets/app-icons/basedash.png" alt="Basedash Icon" />
+          </span>
+
+          <span>
+            <img src="assets/app-icons/rise.png" alt="Rise Icon" />
+          </span>
+
+          <span>
+            <img
+              style="transform: scale(0.95)"
+              src="assets/app-icons/archbee.png"
+              alt="Archebee Icon"
+            />
+          </span>
+
+          <span>
+            <img
+              style="transform: scale(0.9)"
+              src="assets/app-icons/multiverse.png"
+              alt="Multiverse Icon"
+            />
+          </span>
+
+          <span>
+            <img
+              style="transform: scale(0.9)"
+              src="assets/app-icons/screenspace.png"
+              alt="Screenspace Icon"
+            />
+          </span>
+        </div>
+      </div>
+    </main>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="video.popup.js"></script>
     <script src="sticky.js"></script>
     <script src="main.js"></script>
-    <script>
-      var myvideo = document.getElementById('myvideo')
-
-      /* add the same event and 
-   handler function to each 
-   of the three buttons */
-      var buttons = ['playme', 'jump', 'jump2']
-
-      buttons.forEach(function (bn) {
-        document
-          .getElementById(bn)
-          .addEventListener('mouseenter', buttonEvents, !1)
-      })
-
-      function buttonEvents(e) {
-        /* get the id of the clicked button */
-        var element_id = e.target.id
-        /* E.G. element_id = 'playme', 'jump', or 'jump2' */
-
-        /* declare variables before setting them */
-        var timeStart = 0
-        var timeEnd = 0
-
-        /* set start and end values depending 
-       on which button was clicked */
-        switch (element_id) {
-          case 'playme':
-            /* example values... */
-            timeStart = 0
-            timeEnd = 100
-            break
-          case 'jump':
-            timeStart = 4
-            timeEnd = 12
-            break
-          case 'jump2':
-            timeStart = 12
-            timeEnd = 24
-        }
-
-        /* call 'playVideo()' */
-        playVideo(timeStart, timeEnd)
-      }
-
-      function playVideo(startTime, endTime) {
-        function checkTime() {
-          if (myvideo.currentTime >= endTime) {
-            myvideo.currentTime = startTime
-            myvideo.pause()
-          } else {
-            /* call checkTime every 1/10th 
-          second until endTime */
-            setTimeout(checkTime, 100)
-          }
-        }
-
-        /* stop if playing (otherwise ignored) */
-        myvideo.pause()
-        /* set video start time */
-        myvideo.currentTime = startTime
-        /* play video */
-        myvideo.play()
-        /* check the current time and 
-   pause IF/WHEN endTime is reached */
-        checkTime()
-      }
-    </script>
   </body>
 </html>

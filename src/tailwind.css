@@ -15,6 +15,14 @@
   --line-height: 1.5;
 }
 
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
 .main-navigation-toggle {
   position: fixed;
   height: 1px;
@@ -283,7 +291,6 @@ svg {
   align-items: flex-start;
   gap: 1rem;
   cursor: pointer;
-
 }
 
 .features_title {
@@ -325,28 +332,30 @@ svg {
 .code_list_title {
   border-bottom: 1px dotted #777;
   border-bottom-width: 2px;
+  transition: 0.2 ease-in-out;
+}
+
+.code_list_title:hover {
+  border-bottom: 1px solid #777;
 }
 
 .code_bar {
   width: 500px;
-  padding: 4rem 0;
-  margin-top: -3.2rem;
-  background: rgba(245, 245, 245, 0.15);
-  background-blend-mode: luminosity;
-  border: 1px solid #fff;
+  height: 120px;
+  margin-top: -5%;
+  background: hsla(0, 0%, 96.1%, 0.15);
+  border: 2px solid hsla(0, 0%, 95%, 0.8);
   box-shadow: 0px 3.8254px 23.9087px rgba(0, 0, 0, 0.13);
-  backdrop-filter: blur(34.0111px);
-  /* Note: backdrop-filter has minimal browser support */
+  backdrop-filter: blur(40px);
   border-radius: 10.2465px;
   object-fit: cover;
   object-position: 0% 0;
 }
 
 .code_image {
-  width: 500px;
-  height: 200px;
-  position: absolute;
-  bottom: -8px;
+  width: 100%;
+  position: relative;
+  bottom: 45%;
 }
 
 .nav_item {
@@ -374,7 +383,7 @@ svg {
   width: 900px;
   height: 197px;
   object-fit: cover;
-  object-position: -60% 0;
+  object-position: -30% 0;
 }
 
 .our_installer {
@@ -625,6 +634,18 @@ input:checked + .slider:before {
   font-weight: 500;
 }
 
+.left_star {
+  position: absolute;
+  left: 0;
+  bottom: 30%;
+}
+
+.right_star {
+  position: absolute;
+  right: 0;
+  bottom: 30%;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .hero_banner {
     transform: scale(1.1);
@@ -635,11 +656,12 @@ input:checked + .slider:before {
   .code_image {
     width: 100%;
     height: 140px;
-    top: -45%;
+    /* top: -45%; */
   }
   .code_bar {
-    width: 400px;
-    padding: 3.2rem 0;
+    width: max-content;
+    height: 101px;
+    margin-top: -10%;
   }
   .downloading_image {
     width: 810px;
@@ -681,7 +703,7 @@ input:checked + .slider:before {
   }
   #v0 {
     width: 100%;
-    margin: 0 auto;
+    margin: -40px auto;
   }
   .features_item {
     width: 100%;
@@ -702,9 +724,6 @@ input:checked + .slider:before {
   .features_title {
     font-size: 20px;
   }
-  .features_icon {
-    transform: scale(1);
-  }
   .hero_banner {
     transform: scale(1);
   }
@@ -715,7 +734,7 @@ input:checked + .slider:before {
     width: 100%;
     height: 350px;
     object-fit: cover;
-    object-position: -14% 0;
+    object-position: -5% 0;
     margin-bottom: 2rem;
     filter: drop-shadow(0px 0px 32.0125px rgba(0, 19, 41, 0.12));
   }
@@ -764,8 +783,12 @@ input:checked + .slider:before {
   }
 
   .code_bar {
-    width: 250px;
-    padding: 2rem 0;
+    width: max-content;
+    height: 75px;
+    margin-top: -10%;
+  }
+  .left_star {
+    bottom: 70%;
   }
 }
 
