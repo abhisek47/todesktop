@@ -96,9 +96,11 @@ var buttons = [
   'tray'
 ]
 
-buttons.forEach(function (bn) {
-  document.getElementById(bn).addEventListener('hover', buttonEvents, !1)
-})
+window.onload = function () {
+  buttons.forEach(function (bn) {
+    document.getElementById(bn).addEventListener('mouseenter', buttonEvents, !1)
+  })
+}
 
 function buttonEvents(e) {
   /* get the id of the clicked button */
@@ -135,7 +137,7 @@ function buttonEvents(e) {
       break
     case 'tray':
       timeStart = 19
-      timeEnd = 23.99
+      timeEnd = 24
   }
 
   /* call 'playVideo()' */
@@ -144,7 +146,7 @@ function buttonEvents(e) {
 
 function playVideo(startTime, endTime) {
   function checkTime() {
-    if (myvideo.currentTime >= endTime) {
+    if (myvideo.currentTime > endTime) {
       // myvideo.currentTime = startTime
       myvideo.pause()
     } else {
@@ -155,7 +157,7 @@ function playVideo(startTime, endTime) {
   }
 
   /* stop if playing (otherwise ignored) */
-  myvideo.pause()
+  // myvideo.pause()
   /* set video start time */
   myvideo.currentTime = startTime
   /* play video */
