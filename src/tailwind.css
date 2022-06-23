@@ -895,3 +895,15 @@ input:checked + .slider:before {
     transform: translateY(0);
   }
 }
+
+.app_icons {
+  width: 100%;
+}
+.overflows {
+  margin: 0.5rem;
+  height: 95%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto auto auto auto auto auto;
+  align-items: center;
+}

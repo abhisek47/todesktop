@@ -11,19 +11,18 @@
   </head>
   <style>
     .app_icons {
-      flex: 5;
-      position: relative;
+      width: 100%;
     }
     .overflows {
-      transform: scale(0.8);
-      width: 49vw;
-      height: 95%;
+      margin: 0.5rem;
       height: 95%;
       display: grid;
-      grid-template-columns: repeat(5, 20%);
+      justify-content: center;
+      grid-template-columns: auto auto auto auto auto auto;
+      align-items: center;
     }
 
-    span {
+    /* span {
       position: relative;
     }
 
@@ -53,21 +52,12 @@
       span:nth-child(20) img {
         margin-left: 30px;
       }
-    }
-    .app_icons img {
-      width: 90%;
-    }
-    .our-customers {
-      position: absolute;
-      left: -100%;
-      width: 100%;
-      top: 10%;
-    }
+    } */
   </style>
   <body>
     <main class="flex items-center justify-center">
-      <div class="app-icons">
-        <div class="overflows gap-x-4 md:gap-x-12 gap-y-2">
+      <div class="app-icons block md:hidden">
+        <div class="overflows gap-4 md:gap-x-12 gap-y-4">
           <span>
             <img src="assets/app-icons/linear.png" alt="Linear Icon" />
           </span>
@@ -82,108 +72,107 @@
           </span>
 
           <span>
-            <img
-              style="transform: scale(0.85)"
-              src="assets/app-icons/dark.png"
-              alt="Dark Icon"
-            />
+            <img src="assets/app-icons/dark.png" alt="Dark Icon" />
           </span>
 
           <span>
             <img src="assets/app-icons/clickup.png" alt="ClickUp Icon" />
           </span>
           <span>
-            <img src="assets/app-icons/cron.png" alt="Cron Icon" />
+            <img
+              style="transform: scale(0.9)"
+              src="assets/app-icons/dex.png"
+              alt="Cron Icon"
+            />
           </span>
           <span>
-            <img
-              style="transform: scale(0.95)"
-              src="assets/app-icons/beeper.png"
-              alt="Beeper Icon"
-            />
+            <img src="assets/app-icons/slite-new.png" alt="Beeper Icon" />
           </span>
 
           <span>
             <img
-              style="transform: scale(0.95)"
-              src="assets/app-icons/bento.png"
+              style="transform: scale(0.9)"
+              src="assets/app-icons/interplay.png"
               alt="Bento Icon"
             />
           </span>
 
           <span>
             <img
-              style="transform: scale(0.9)"
-              src="assets/app-icons/gain.png"
+              style="transform: scale(1)"
+              src="assets/app-icons/milk.png"
               alt="Gain Icon"
             />
           </span>
 
           <span>
-            <img src="assets/app-icons/tandem.png" alt="Tandem Icon" />
-          </span>
-          <span>
-            <img src="assets/app-icons/sunsama.png" alt="Sunsama Icon" />
-          </span>
-          <span>
-            <img src="assets/app-icons/slapdash.png" alt="Slapdash Icon" />
-          </span>
-          <span>
             <img
-              style="transform: scale(0.82)"
-              src="assets/app-icons/airtime.png"
-              alt="Airtime Icon"
+              style="transform: scale(1)"
+              src="assets/app-icons/basedash.png"
+              alt="Tandem Icon"
             />
           </span>
           <span>
-            <img src="assets/app-icons/clovis.png" alt="Clovis Icon" />
+            <img src="assets/app-icons/rise.png" alt="Sunsama Icon" />
           </span>
-
-          <span>
+          <span
+            style="
+              grid-column: 1 / span 2;
+              position: relative;
+              height: 50px;
+              top: -35%;
+            "
+          >
             <img
               src="assets/our-customers.svg"
               class="our-customers"
               alt="Arrows pointing to 'Our Customers'"
             />
-            <img src="assets/app-icons/kitemaker.png" alt="Kitemaker Icon" />
+          </span>
+          <span>
+            <img src="assets/app-icons/tandem.png" alt="Clovis Icon" />
+          </span>
+
+          <span>
+            <img src="assets/app-icons/sunsama.png" alt="Kitemaker Icon" />
           </span>
           <span>
             <img
-              style="transform: scale(0.9)"
-              src="assets/app-icons/dex.png"
+              style="transform: scale(1)"
+              src="assets/app-icons/slapdash.png"
               alt="Dex Icon"
             />
           </span>
           <span>
             <img
-              style="transform: scale(1.1)"
-              src="assets/app-icons/slite-new.png"
+              style="transform: scale(0.8)"
+              src="assets/app-icons/airtime.png"
               alt="Slite Icon"
             />
           </span>
           <span>
             <img
-              style="transform: scale(0.9)"
-              src="assets/app-icons/interplay.png"
+              style="transform: scale(1)"
+              src="assets/app-icons/cron.png"
               alt="Interplay Icon"
             />
           </span>
           <span>
-            <img src="assets/app-icons/milk.png" alt="Milk Icon" />
+            <img src="assets/app-icons/beeper.png" alt="Milk Icon" />
           </span>
 
           <span>
-            <img src="assets/app-icons/basedash.png" alt="Basedash Icon" />
+            <img src="assets/app-icons/bento.png" alt="Basedash Icon" />
           </span>
 
           <span>
-            <img src="assets/app-icons/rise.png" alt="Rise Icon" />
+            <img src="assets/app-icons/clovis.png" alt="Rise Icon" />
           </span>
 
           <span>
             <img
-              style="transform: scale(0.95)"
-              src="assets/app-icons/archbee.png"
+              style="transform: scale(0.9)"
+              src="assets/app-icons/gain.png"
               alt="Archebee Icon"
             />
           </span>
@@ -191,16 +180,8 @@
           <span>
             <img
               style="transform: scale(0.9)"
-              src="assets/app-icons/multiverse.png"
+              src="assets/app-icons/kitemaker.png"
               alt="Multiverse Icon"
-            />
-          </span>
-
-          <span>
-            <img
-              style="transform: scale(0.9)"
-              src="assets/app-icons/screenspace.png"
-              alt="Screenspace Icon"
             />
           </span>
         </div>
