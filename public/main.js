@@ -148,11 +148,15 @@ function playVideo(startTime, endTime) {
   function checkTime() {
     if (myvideo.currentTime > endTime) {
       myvideo.pause()
+    } else {
+      /* call checkTime every 1/10th 
+          second until endTime */
+      setTimeout(checkTime, 100)
     }
   }
 
   /* stop if playing (otherwise ignored) */
-  // myvideo.pause()
+  myvideo.pause()
   /* set video start time */
   myvideo.currentTime = startTime
   /* play video */
