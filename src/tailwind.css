@@ -272,8 +272,8 @@ img {
 
 .svg_icon {
   height: fit-content;
-  background-color: #f0f9ff;
-  padding: 0.6rem; /* 8px */
+  background-color: #f4f7fc;
+  padding: 0.7rem; /* 8px */
   border-radius: 10.9859px;
   transition: 0.2s ease-in-out;
 }
@@ -378,6 +378,7 @@ svg {
 
 .publish_list_title {
   color: #4a5568;
+  font-size: 14px;
 }
 .downloading_image {
   width: 900px;
@@ -400,9 +401,9 @@ svg {
 
 .bootstrap_video {
   width: 88%;
-  height: 550px;
-  object-fit: cover;
-  object-position: 2% 0;
+  /* height: 100%; */
+  /* object-fit: cover;
+  object-position: 2% 0; */
   margin-top: 2rem;
 }
 
@@ -410,6 +411,7 @@ svg {
   border-radius: 14px;
   transition: 0.2s ease-in-out;
   cursor: pointer;
+  padding: 1rem;
 }
 
 .features_container:hover {
@@ -424,7 +426,7 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f0f6ff;
+  background: #f7faff;
   border-radius: 12px;
 }
 
@@ -613,6 +615,7 @@ input:checked + .slider:before {
   justify-content: center;
   align-items: center;
   height: 100px;
+  margin-top: 2rem;
   background: linear-gradient(180deg, #5e83ff 0%, #2e33f1 100%);
   backdrop-filter: blur(3.88075px);
 }
@@ -646,9 +649,9 @@ input:checked + .slider:before {
   bottom: 30%;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 767px) and (max-width: 1024px) {
   .hero_banner {
-    transform: scale(1.1);
+    transform: scale(1);
   }
   .our_installer {
     left: 35%;
@@ -670,10 +673,10 @@ input:checked + .slider:before {
     object-position: -50% 0;
   }
   .bootstrap_video {
-    width: 88%;
-    height: 400px;
-    object-fit: cover;
-    object-position: 2% 0;
+    width: 97.5%;
+    /* height: 420px; */
+    /* object-fit: cover;
+    object-position: 2% 0; */
     margin-top: 2rem;
   }
   .subs_bg {
@@ -685,6 +688,11 @@ input:checked + .slider:before {
   .features_item {
     width: 45%;
     margin: 20px 0;
+  }
+
+  .features_icon {
+    padding: 1rem;
+    border-radius: 10px;
   }
 }
 
