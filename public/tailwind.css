@@ -1701,7 +1701,9 @@ svg {
 }
 
 .code_bar {
-  width: 600px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 120px;
   margin-top: -5%;
   background: hsla(0, 0%, 96.1%, 0.15);
@@ -2030,7 +2032,15 @@ input:checked + .slider:before {
   top: 15vh;
 }
 
+.active {
+  top: 0;
+}
+
 @media screen and (min-width: 767px) and (max-width: 1279px) {
+  .features_title {
+    font-size: 20px;
+  }
+
   #v0 {
     margin-left: 0;
   }
@@ -2058,12 +2068,12 @@ input:checked + .slider:before {
   }
 
   .downloading_image {
-    width: 810px;
-    height: 140px;
+    width: 700px;
+    height: 115px;
     -o-object-fit: cover;
        object-fit: cover;
-    -o-object-position: -50% 0;
-       object-position: -50% 0;
+    -o-object-position: -40% 0;
+       object-position: -40% 0;
   }
 
   .bootstrap_video {
@@ -2180,7 +2190,7 @@ input:checked + .slider:before {
   }
 
   .our_installer_right {
-    top: 48%;
+    top: 49%;
   }
 
   .nav_item {
@@ -2207,9 +2217,9 @@ input:checked + .slider:before {
   }
 
   .code_bar {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     height: 75px;
     margin-top: -10%;
   }
@@ -2420,10 +2430,6 @@ input:checked + .slider:before {
     display: none;
   }
 
-  .md\:h-44 {
-    height: 11rem;
-  }
-
   .md\:w-max {
     width: -webkit-max-content;
     width: -moz-max-content;
@@ -2527,6 +2533,10 @@ input:checked + .slider:before {
     padding-bottom: 0.5rem;
   }
 
+  .md\:pr-24 {
+    padding-right: 6rem;
+  }
+
   .md\:text-center {
     text-align: center;
   }
@@ -2601,6 +2611,10 @@ input:checked + .slider:before {
   .lg\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .lg\:pr-44 {
+    padding-right: 11rem;
   }
 
   .lg\:text-4xl {

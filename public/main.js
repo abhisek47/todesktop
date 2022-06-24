@@ -82,6 +82,13 @@ checkbox.addEventListener('change', (event) => {
 
 // ---------------------
 
+// $('.features_item').click(() => {
+//   // entry.target.classList.toggle('active', entry.isIntersecting)
+//   $('html,body').animate({
+//     scrollTop: $('.features_item').
+//   })
+// })
+
 const cards = document.querySelectorAll('.features_item')
 
 const observer = new IntersectionObserver(
@@ -89,6 +96,9 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       console.log(entry)
       entry.target.classList.toggle('show', entry.isIntersecting)
+      entry.target.addEventListener('click', () => {
+        entry.target.scrollIntoView({ block: 'center' })
+      })
       if (entry.isIntersecting) {
         const intersectingId = entry.target.id
         console.log(intersectingId)

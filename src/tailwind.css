@@ -349,7 +349,7 @@ svg {
 }
 
 .code_bar {
-  width: 600px;
+  width: fit-content;
   height: 120px;
   margin-top: -5%;
   background: hsla(0, 0%, 96.1%, 0.15);
@@ -666,7 +666,14 @@ input:checked + .slider:before {
   top: 15vh;
 }
 
+.active {
+  top: 0;
+}
+
 @media screen and (min-width: 767px) and (max-width: 1279px) {
+  .features_title {
+    font-size: 20px;
+  }
   #v0 {
     margin-left: 0;
   }
@@ -687,10 +694,10 @@ input:checked + .slider:before {
     margin-top: -10%;
   }
   .downloading_image {
-    width: 810px;
-    height: 140px;
+    width: 700px;
+    height: 115px;
     object-fit: cover;
-    object-position: -50% 0;
+    object-position: -40% 0;
   }
   .bootstrap_video {
     width: 97.5%;
@@ -784,7 +791,7 @@ input:checked + .slider:before {
     object-position: -40% 0;
   }
   .our_installer_right {
-    top: 48%;
+    top: 49%;
   }
   .nav_item {
     display: none;
@@ -809,7 +816,7 @@ input:checked + .slider:before {
   }
 
   .code_bar {
-    width: max-content;
+    width: fit-content;
     height: 75px;
     margin-top: -10%;
   }
