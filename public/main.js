@@ -38,29 +38,29 @@ $('#video').videoPopup({
 // Scroll to top
 
 //Get the button
-var mybutton = document.getElementById('myBtn')
+// var mybutton = document.getElementById('myBtn')
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction()
-}
+// window.onscroll = function () {
+//   scrollFunction()
+// }
 
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 500 ||
-    document.documentElement.scrollTop > 500
-  ) {
-    mybutton.style.display = 'flex'
-  } else {
-    mybutton.style.display = 'none'
-  }
-}
+// function scrollFunction() {
+//   if (
+//     document.body.scrollTop > 500 ||
+//     document.documentElement.scrollTop > 500
+//   ) {
+//     mybutton.style.display = 'flex'
+//   } else {
+//     mybutton.style.display = 'none'
+//   }
+// }
 
 // When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0
-  document.documentElement.scrollTop = 0
-}
+// function topFunction() {
+//   document.body.scrollTop = 0
+//   document.documentElement.scrollTop = 0
+// }
 
 // Price change
 
@@ -80,6 +80,32 @@ checkbox.addEventListener('change', (event) => {
   }
 })
 
+// ---------------------
+
+const cards = document.querySelectorAll('.features_item')
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      console.log(entry)
+      entry.target.classList.toggle('show', entry.isIntersecting)
+      if (entry.isIntersecting) {
+        const intersectingId = entry.target.id
+        console.log(intersectingId)
+        return buttonEvents(entry.target.id)
+      }
+    })
+  },
+  {
+    rootMargin: '-30% 0% -30% 0%',
+    threshold: 1
+  }
+)
+
+cards.forEach((card) => {
+  observer.observe(card)
+})
+
 // Video play
 
 var myvideo = document.getElementById('v0')
@@ -96,15 +122,15 @@ var buttons = [
   'tray'
 ]
 
-window.onload = function () {
-  buttons.forEach(function (bn) {
-    document.getElementById(bn).addEventListener('mouseenter', buttonEvents, !1)
-  })
-}
+// window.onload = function () {
+//   buttons.forEach(function (bn) {
+//     document.getElementById(bn).addEventListener('mouseenter', buttonEvents, !1)
+//   })
+// }
 
 function buttonEvents(e) {
   /* get the id of the clicked button */
-  var element_id = e.target.id
+  var element_id = e
   /* E.G. element_id = 'playme', 'jump', or 'jump2' */
 
   /* declare variables before setting them */
@@ -137,7 +163,8 @@ function buttonEvents(e) {
       break
     case 'tray':
       timeStart = 19
-      timeEnd = 24
+      timeEnd = 23.55
+      break
   }
 
   /* call 'playVideo()' */
