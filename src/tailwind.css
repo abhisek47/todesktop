@@ -13,6 +13,7 @@
   --font-heading: system-ui, san-serif;
   --font-size: 1.125rem;
   --line-height: 1.5;
+  overflow-x: hidden;
 }
 
 img {
@@ -283,7 +284,12 @@ svg {
 }
 
 .hero_banner {
-  width: 100%;
+  -o-object-fit: cover;
+  height: 500px;
+  width: 750px;
+  object-fit: cover;
+  -o-object-position: -20% 0%;
+  object-position: -20% 0%;
 }
 
 .features_item,
@@ -633,7 +639,7 @@ input:checked + .slider:before {
 }
 
 .features_item_two {
-  width: 450px;
+  width: 100%;
 }
 
 #video {
@@ -690,7 +696,7 @@ input:checked + .slider:before {
   top: 0;
 }
 
-@media screen and (min-width: 767px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   .features_title {
     font-size: 20px;
   }
@@ -737,6 +743,24 @@ input:checked + .slider:before {
   .features_icon {
     padding: 1rem;
     border-radius: 10px;
+  }
+  .banner {
+    margin-top: 1rem;
+  }
+  .hero_banner {
+    transform: scale(1.2);
+    -o-object-fit: cover;
+    height: 295px;
+    width: 410px;
+    object-fit: cover;
+    -o-object-position: -20% 0%;
+    object-position: -20% 0%;
+  }
+  .combinator {
+    margin-top: 1rem;
+  }
+  .banner_left {
+    padding-right: 1rem;
   }
 }
 
@@ -975,6 +999,3 @@ input:checked + .slider:before {
 .para_hide {
   display: flex;
 }
-
-
-

@@ -257,11 +257,11 @@
         <!-- Banner Start -->
         <div class="container mx-auto">
           <section
-            class="grid grid-row-2 md:grid-cols-3 gap-2 lg:gap-12 p-4 items-center"
+            class="grid grid-row-2 md:grid-cols-2 md:gap-12 lg:gap-12 p-4 items-center banner"
           >
-            <div class="mt-4 md:mt-1 z-20">
+            <div class="mt-4 md:mt-1 z-20 banner_left">
               <h1
-                class="text-4xl md:text-2xl lg:text-4xl xl:text-6xl mb-4 lg:mb-4 xl:mb-8 font-bold leading-tight"
+                class="text-4xl md:text-3xl lg:text-4xl xl:text-6xl mb-4 lg:mb-4 xl:mb-8 font-bold leading-tight"
               >
                 Make your web app into a beautiful desktop app
               </h1>
@@ -305,11 +305,11 @@
                 </button>
               </div>
             </div>
-            <div class="mt-4 md:mt-2 lg:mt-10 z-20 md:col-span-2">
+            <div class="mt-4 z-20 hero_banner">
               <img
                 src="assets/hero_banner.png"
                 alt=""
-                class="hidden md:block hero_banner"
+                class="hidden md:block"
               />
               <div class="app-icons block md:hidden">
                 <div class="overflows gap-2 md:gap-x-12 gap-y-4">
@@ -459,7 +459,7 @@
             </div>
           </section>
           <div
-            class="text-right pt-6 md:pt-10 xl:pt-16 mr-4 md:mr-12 flex justify-center md:justify-end gap-2"
+            class="text-right pt-6 md:pt-10 xl:pt-16 flex justify-center md:justify-end gap-2 combinator"
           >
             <img src="assets/y_combinator.svg" alt="" />
             <p>We are backed by Y Combinator</p>
@@ -490,7 +490,7 @@
               Types of apps you can build with ToDesktop
             </h1>
             <div
-              class="flex flex-col md:flex-row md:gap-8 lg:gap-12 items-start mt-16 wrapper"
+              class="grid grid-rows-1 md:grid-cols-2 md:gap-4 lg:gap-12 items-start mt-16 wrapper"
             >
               <!-- Web and mobile view start -->
               <div
@@ -752,7 +752,7 @@
                 </div>
               </div>
               <div
-                class="flex md:hidden xl:flex features_video_two order-first md:order-last"
+                class="flex md:hidden xl:flex md:col-span-2 features_video_two order-first md:order-last"
               >
                 <video id="v1" tabindex="0" autobuffer preload muted>
                   <source type="video/mp4" src="videos/todesktop-vid.mp4" />
@@ -1018,7 +1018,7 @@
                 </div>
               </div>
               <div
-                class="hidden md:flex xl:hidden features_video order-first md:order-last"
+                class="hidden md:flex xl:hidden features_video lg:col-span-1 order-first md:order-last"
               >
                 <video id="v0" tabindex="0" autobuffer preload muted>
                   <source type="video/mp4" src="videos/todesktop-vid.mp4" />
