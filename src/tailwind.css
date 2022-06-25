@@ -771,6 +771,9 @@ input:checked + .slider:before {
     margin-top: 2rem;
     top: 50px;
   }
+  .banner_left {
+    padding-right: 0;
+  }
   #video {
     width: 70px;
     height: 70px;
@@ -810,9 +813,6 @@ input:checked + .slider:before {
   }
   .features_title {
     font-size: 20px;
-  }
-  .hero_banner {
-    transform: scale(1);
   }
   .hero_banner_mobile {
     transform: scale(1.1);

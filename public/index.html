@@ -257,7 +257,7 @@
         <!-- Banner Start -->
         <div class="container mx-auto">
           <section
-            class="grid grid-row-2 md:grid-cols-2 md:gap-12 lg:gap-12 p-4 items-center banner"
+            class="grid grid-rows-1 md:grid-cols-2 gap-4 md:gap-12 lg:gap-12 p-4 items-center banner"
           >
             <div class="mt-4 md:mt-1 z-20 banner_left">
               <h1
@@ -305,12 +305,10 @@
                 </button>
               </div>
             </div>
-            <div class="mt-4 z-20 hero_banner">
-              <img
-                src="assets/hero_banner.png"
-                alt=""
-                class="hidden md:block"
-              />
+            <div class="mt-4 z-20 hidden md:block hero_banner">
+              <img src="assets/hero_banner.png" alt="" />
+            </div>
+            <div class="block md:hidden mobile_banner">
               <div class="app-icons block md:hidden">
                 <div class="overflows gap-2 md:gap-x-12 gap-y-4">
                   <span>
@@ -752,7 +750,7 @@
                 </div>
               </div>
               <div
-                class="flex md:hidden xl:flex  features_video_two order-first md:order-last"
+                class="flex md:hidden xl:flex features_video_two order-first md:order-last"
               >
                 <video id="v1" tabindex="0" autobuffer preload muted>
                   <source type="video/mp4" src="videos/todesktop-vid.mp4" />
