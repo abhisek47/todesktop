@@ -283,10 +283,11 @@ svg {
 }
 
 .hero_banner {
-  transform: scale(1.2);
+  width: 100%;
 }
 
-.features_item {
+.features_item,
+.features_item_two {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
@@ -386,7 +387,11 @@ button {
 }
 
 .btn:hover {
-  box-shadow: 0px 11.4462px 18.3139px rgba(87, 120, 254, 0.2);
+  box-shadow: 0px 11.4462px 18.3139px rgba(87, 120, 254, 0.1);
+}
+
+.faq_btn:hover {
+  box-shadow: 0px 11.4462px 18.3139px rgba(22, 22, 22, 0.1);
 }
 
 .publish_list_title {
@@ -610,15 +615,25 @@ input:checked + .slider:before {
   z-index: -1;
 }
 
-#v0 {
-  width: 95%;
-  margin-left: 10%;
+#v0,
+#v1 {
+  width: 100%;
+  /* margin-left: 10%; */
   /* right: 0; */
 }
 
-.features_item {
-  width: 500px;
-  margin: 50px 0;
+/* #v1 {
+  transform: scale(1.1);
+  padding-right: 1.2rem;
+} */
+
+.features_item,
+.features_item_two {
+  margin: 60px 0;
+}
+
+.features_item_two {
+  width: 450px;
 }
 
 #video {
@@ -666,6 +681,11 @@ input:checked + .slider:before {
   top: 15vh;
 }
 
+.features_video_two {
+  position: sticky;
+  top: 15vh;
+}
+
 .active {
   top: 0;
 }
@@ -676,9 +696,6 @@ input:checked + .slider:before {
   }
   #v0 {
     margin-left: 0;
-  }
-  .hero_banner {
-    transform: scale(1);
   }
   .our_installer {
     left: 35%;
@@ -714,7 +731,7 @@ input:checked + .slider:before {
   }
   .features_item {
     width: 100%;
-    margin: 10% 0;
+    margin: 60px 0;
   }
 
   .features_icon {
@@ -724,7 +741,8 @@ input:checked + .slider:before {
 }
 
 @media screen and (max-width: 767px) {
-  .features_video {
+  .features_video,
+  .features_video_two {
     position: sticky;
     margin-top: 2rem;
     top: 50px;
@@ -738,13 +756,21 @@ input:checked + .slider:before {
   #video svg {
     width: 16px;
   }
-  #v0 {
+  #v0,
+  #v1 {
     width: 100%;
     margin: -40px auto;
   }
+  .features_item_two {
+    width: 100%;
+  }
+  #v1 {
+    transform: scale(1);
+    padding-right: 0;
+  }
   .features_item {
     width: 100%;
-    margin: 50px 0;
+    margin: 40px 0;
   }
   .hero_backdrop_left {
     width: 300px;
@@ -940,3 +966,15 @@ input:checked + .slider:before {
   grid-template-columns: auto auto auto auto auto auto;
   align-items: center;
 }
+
+#btntoggle,
+#professionalBtn {
+  cursor: pointer;
+}
+
+.para_hide {
+  display: flex;
+}
+
+
+

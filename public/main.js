@@ -90,6 +90,7 @@ checkbox.addEventListener('change', (event) => {
 // })
 
 const cards = document.querySelectorAll('.features_item')
+const cardsTwo = document.querySelectorAll('.features_item_two')
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -107,7 +108,7 @@ const observer = new IntersectionObserver(
     })
   },
   {
-    rootMargin: '-30% 0% -30% 0%',
+    rootMargin: '0% 0% -70% 0%',
     threshold: 1
   }
 )
@@ -116,9 +117,37 @@ cards.forEach((card) => {
   observer.observe(card)
 })
 
+//  -----
+
+const observerTwo = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      console.log(entry)
+      entry.target.classList.toggle('show', entry.isIntersecting)
+      entry.target.addEventListener('click', () => {
+        entry.target.scrollIntoView({ block: 'center' })
+      })
+      if (entry.isIntersecting) {
+        const intersectingId = entry.target.id
+        console.log(intersectingId)
+        return buttonEventsTwo(entry.target.id)
+      }
+    })
+  },
+  {
+    rootMargin: '-20% 0% -20% 0%',
+    threshold: 1
+  }
+)
+
+cardsTwo.forEach((card) => {
+  observerTwo.observe(card)
+})
+
 // Video play
 
 var myvideo = document.getElementById('v0')
+var myvideoTwo = document.getElementById('v1')
 
 /* add the same event and 
    handler function to each 
@@ -130,6 +159,15 @@ var buttons = [
   'multiWindow',
   'tabbed',
   'tray'
+]
+
+var buttonTwo = [
+  'webApp2',
+  'nativeNotification2',
+  'panel2',
+  'multiWindow2',
+  'tabbed2',
+  'tray2'
 ]
 
 // window.onload = function () {
@@ -181,13 +219,57 @@ function buttonEvents(e) {
   playVideo(timeStart, timeEnd)
 }
 
+function buttonEventsTwo(e) {
+  /* get the id of the clicked button */
+  var element_id = e
+  /* E.G. element_id = 'playme', 'jump', or 'jump2' */
+
+  /* declare variables before setting them */
+  var timeStart = 0
+  var timeEnd = 0
+
+  /* set start and end values depending 
+       on which button was clicked */
+  switch (element_id) {
+    case 'webApp2':
+      /* example values... */
+      timeStart = 0
+      timeEnd = 4.65
+      break
+    case 'nativeNotification2':
+      timeStart = 4.65
+      timeEnd = 5.9
+      break
+    case 'panel2':
+      timeStart = 13.15
+      timeEnd = 17
+      break
+    case 'multiWindow2':
+      timeStart = 16
+      timeEnd = 19
+      break
+    case 'tabbed2':
+      timeStart = 6.02
+      timeEnd = 13
+      break
+    case 'tray2':
+      timeStart = 19
+      timeEnd = 23.55
+      break
+  }
+
+  /* call 'playVideo()' */
+  playVideoTwo(timeStart, timeEnd)
+}
+
 function playVideo(startTime, endTime) {
   function checkTime() {
-    if (myvideo.currentTime > endTime) {
+    if (myvideo.currentTime >= endTime) {
       myvideo.pause()
     } else {
       /* call checkTime every 1/10th 
           second until endTime */
+      myvideo.play()
       setTimeout(checkTime, 100)
     }
   }
@@ -201,4 +283,27 @@ function playVideo(startTime, endTime) {
   /* check the current time and 
    pause IF/WHEN endTime is reached */
   checkTime()
+}
+
+function playVideoTwo(startTime, endTime) {
+  function checkTimeTwo() {
+    if (myvideoTwo.currentTime >= endTime) {
+      myvideoTwo.pause()
+    } else {
+      /* call checkTime every 1/10th 
+          second until endTime */
+      myvideoTwo.play()
+      setTimeout(checkTimeTwo, 100)
+    }
+  }
+
+  /* stop if playing (otherwise ignored) */
+  myvideoTwo.pause()
+  /* set video start time */
+  myvideoTwo.currentTime = startTime
+  /* play video */
+  myvideoTwo.play()
+  /* check the current time and 
+   pause IF/WHEN endTime is reached */
+  checkTimeTwo()
 }
