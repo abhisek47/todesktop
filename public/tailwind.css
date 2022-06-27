@@ -1620,7 +1620,7 @@ img {
   transform: translateY(4px);
 }
 
-.features_item:hover,
+.features_item:hover path,
 .features_item_two:hover path {
   stroke: #006df6;
 }
