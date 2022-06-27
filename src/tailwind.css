@@ -374,7 +374,7 @@ svg {
   background: hsla(0, 0%, 96.1%, 0.15);
   border: 2px solid hsla(0, 0%, 95%, 0.8);
   box-shadow: 0px 3.8254px 23.9087px rgba(0, 0, 0, 0.13);
-  backdrop-filter: blur(40px);
+  backdrop-filter: blur(15px);
   border-radius: 10.2465px;
   object-fit: cover;
   object-position: 0% 0;
@@ -1032,4 +1032,10 @@ input:checked + .slider:before {
 
 .para_hide {
   display: flex;
+}
+
+@media screen and (min-width: 1920px) {
+  .features_item_two {
+    margin: 100px 0;
+  }
 }
