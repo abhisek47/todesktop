@@ -2274,6 +2274,11 @@ input:checked + .slider:before {
 }
 
 @media screen and (max-width: 767px) {
+  .count {
+    width: 32px;
+    height: 32px;
+  }
+
   .app_here_count {
     width: 32px;
     height: 32px;
