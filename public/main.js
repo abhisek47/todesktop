@@ -118,6 +118,7 @@ cards.forEach((card) => {
 })
 
 //  -----
+const featureIcon = document.querySelectorAll('#feature_icon')
 
 const observerTwo = new IntersectionObserver(
   (entries) => {
