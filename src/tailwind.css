@@ -280,7 +280,7 @@ img {
 
 .features_item:hover path,
 .features_item_two:hover path {
-  stroke: #006df6;
+  stroke: #006df6 !important;
 }
 
 .svg_icon {

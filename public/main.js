@@ -118,13 +118,11 @@ cards.forEach((card) => {
 })
 
 //  -----
-const featureIcon = document.querySelectorAll('#feature_icon')
-// const svgIcon = document.querySelector('.svg_icon')
 
 const observerTwo = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      console.log(entry.target.firstElementChild)
+      console.log(entry)
       entry.target.classList.toggle('show', entry.isIntersecting)
       entry.target.addEventListener('click', () => {
         entry.target.scrollIntoView({ block: 'center' })
@@ -132,7 +130,36 @@ const observerTwo = new IntersectionObserver(
       if (entry.isIntersecting) {
         const intersectingId = entry.target.id
         console.log(intersectingId)
-        // $('.svg_icon').html('<img src="./assets/building.svg" alt="" />')
+        if (entry.target.id === 'webApp2') {
+          $('#webApp2 #feature_icon').css('stroke', '#006DF6')
+        } else {
+          $('#webApp2 #feature_icon').css('stroke', '#909EB8')
+        }
+        if (entry.target.id === 'nativeNotification2') {
+          $('#nativeNotification2 #feature_icon').css('stroke', '#006DF6')
+        } else {
+          $('#nativeNotification2 #feature_icon').css('stroke', '#909EB8')
+        }
+        if (entry.target.id === 'panel2') {
+          $('#panel2 #feature_icon').css('stroke', '#006DF6')
+        } else {
+          $('#panel2 #feature_icon').css('stroke', '#909EB8')
+        }
+        if (entry.target.id === 'multiWindow2') {
+          $('#multiWindow2 #feature_icon').css('stroke', '#006DF6')
+        } else {
+          $('#multiWindow2 #feature_icon').css('stroke', '#909EB8')
+        }
+        if (entry.target.id === 'tabbed2') {
+          $('#tabbed2 #feature_icon').css('stroke', '#006DF6')
+        } else {
+          $('#tabbed2 #feature_icon').css('stroke', '#909EB8')
+        }
+        if (entry.target.id === 'tray2') {
+          $('#tray2 #feature_icon').css('stroke', '#006DF6')
+        } else {
+          $('#tray2 #feature_icon').css('stroke', '#909EB8')
+        }
         return buttonEventsTwo(entry.target.id)
       }
     })
