@@ -1143,13 +1143,14 @@ input:checked + .slider:before {
   display: flex;
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1800px) {
   .features_item_two p {
     font-size: 20px;
     padding-right: 8rem;
   }
   .features_item_two {
     padding: 30px 0;
+    margin: 5rem 0;
   }
   #v1 {
     margin-top: 5%;

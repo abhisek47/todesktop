@@ -119,11 +119,12 @@ cards.forEach((card) => {
 
 //  -----
 const featureIcon = document.querySelectorAll('#feature_icon')
+// const svgIcon = document.querySelector('.svg_icon')
 
 const observerTwo = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      console.log(entry)
+      console.log(entry.target.firstElementChild)
       entry.target.classList.toggle('show', entry.isIntersecting)
       entry.target.addEventListener('click', () => {
         entry.target.scrollIntoView({ block: 'center' })
@@ -131,6 +132,7 @@ const observerTwo = new IntersectionObserver(
       if (entry.isIntersecting) {
         const intersectingId = entry.target.id
         console.log(intersectingId)
+        // $('.svg_icon').html('<img src="./assets/building.svg" alt="" />')
         return buttonEventsTwo(entry.target.id)
       }
     })
