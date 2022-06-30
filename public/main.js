@@ -103,6 +103,36 @@ const observer = new IntersectionObserver(
       if (entry.isIntersecting) {
         const intersectingId = entry.target.id
         console.log(intersectingId)
+        if (entry.target.id === 'webApp') {
+          $('#webApp #feature_icon').css('stroke', '#006DF6')
+        } else {
+          $('#webApp #feature_icon').css('stroke', '#909EB8')
+        }
+        if (entry.target.id === 'nativeNotification') {
+          $('#nativeNotification #feature_icon').css('stroke', '#006DF6')
+        } else {
+          $('#nativeNotification #feature_icon').css('stroke', '#909EB8')
+        }
+        if (entry.target.id === 'panel') {
+          $('#panel #feature_icon').css('stroke', '#006DF6')
+        } else {
+          $('#panel #feature_icon').css('stroke', '#909EB8')
+        }
+        if (entry.target.id === 'multiWindow') {
+          $('#multiWindow #feature_icon').css('stroke', '#006DF6')
+        } else {
+          $('#multiWindow #feature_icon').css('stroke', '#909EB8')
+        }
+        if (entry.target.id === 'tabbed') {
+          $('#tabbed #feature_icon').css('stroke', '#006DF6')
+        } else {
+          $('#tabbed #feature_icon').css('stroke', '#909EB8')
+        }
+        if (entry.target.id === 'tray') {
+          $('#tray #feature_icon').css('stroke', '#006DF6')
+        } else {
+          $('#tray #feature_icon').css('stroke', '#909EB8')
+        }
         return buttonEvents(entry.target.id)
       }
     })
