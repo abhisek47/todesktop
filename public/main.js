@@ -82,13 +82,6 @@ checkbox.addEventListener('change', (event) => {
 
 // ---------------------
 
-// $('.features_item').click(() => {
-//   // entry.target.classList.toggle('active', entry.isIntersecting)
-//   $('html,body').animate({
-//     scrollTop: $('.features_item').
-//   })
-// })
-
 const cards = document.querySelectorAll('.features_item')
 const cardsTwo = document.querySelectorAll('.features_item_two')
 
@@ -97,9 +90,9 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       console.log(entry)
       entry.target.classList.toggle('show', entry.isIntersecting)
-      entry.target.addEventListener('click', () => {
-        entry.target.scrollIntoView({ block: 'center' })
-      })
+      // entry.target.addEventListener('click', () => {
+      //   entry.target.scrollIntoView({ block: 'center' })
+      // })
       if (entry.isIntersecting) {
         const intersectingId = entry.target.id
         console.log(intersectingId)
@@ -138,7 +131,7 @@ const observer = new IntersectionObserver(
     })
   },
   {
-    rootMargin: '0% 0% -70% 0%',
+    rootMargin: '0% 0% -65% 0%',
     threshold: 1
   }
 )
@@ -148,6 +141,13 @@ cards.forEach((card) => {
 })
 
 //  -----
+
+let position = ''
+if (window.matchMedia('(min-width:1801px) and (max-width: 1920px)')) {
+  position = '-32% 0% -32% 0%'
+} else if (window.matchMedia('(min-width:1701px) and (max-width: 1800px)')) {
+  position = '25% 0% 30% 0%'
+}
 
 const observerTwo = new IntersectionObserver(
   (entries) => {
@@ -195,7 +195,7 @@ const observerTwo = new IntersectionObserver(
     })
   },
   {
-    rootMargin: '-25% 0% -25% 0%',
+    rootMargin: position,
     threshold: 1
   }
 )
@@ -367,3 +367,9 @@ function playVideoTwo(startTime, endTime) {
    pause IF/WHEN endTime is reached */
   checkTimeTwo()
 }
+
+const box = document.querySelector('.feature_container_two')
+const video = document.querySelector('#v1')
+
+console.log('Features container', box.offsetHeight)
+console.log('Video section', video.offsetHeight)
