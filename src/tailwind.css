@@ -879,7 +879,7 @@ input:checked + .slider:before {
 
 @media screen and (max-width: 767px) {
   .features_item_two {
-    margin: 20px;
+    margin: 20px 0;
   }
   .feature_container_two {
     margin-top: 6rem;
