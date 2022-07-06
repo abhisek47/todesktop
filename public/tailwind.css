@@ -2569,7 +2569,7 @@ input:checked + .slider:before {
   }
 }
 
-@media screen and (min-width: 1550px) and (max-width: 1920px) {
+@media screen and (min-width: 1550px) and (max-width: 2560px) {
   .features_item_two p {
     font-size: 20px;
     padding-right: 8rem;
@@ -2599,11 +2599,11 @@ input:checked + .slider:before {
   }
 }
 
-/* @media screen and (min-width: 1520px) and (max-width: 1800px) {
+@media screen and (min-width: 2000px) and (max-width: 2560px) {
   .features_item_two {
-    padding: 25px 0;
+    padding: 2rem;
   }
-} */
+}
 
 .placeholder\:text-slate-400::-moz-placeholder {
   --tw-text-opacity: 1;

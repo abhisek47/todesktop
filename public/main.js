@@ -147,6 +147,8 @@ if (window.matchMedia('(min-width:1801px) and (max-width: 1920px)')) {
   position = '-32% 0% -32% 0%'
 } else if (window.matchMedia('(min-width:1701px) and (max-width: 1800px)')) {
   position = '25% 0% 30% 0%'
+} else if (window.matchMedia('(min-width:2000px) and (max-width: 2560px)')) {
+  position = '-34% 0% -34% 0%'
 }
 
 const observerTwo = new IntersectionObserver(
