@@ -131,7 +131,7 @@ const observer = new IntersectionObserver(
     })
   },
   {
-    rootMargin: '0% 0% -65% 0%',
+    rootMargin: '0% 0% -70% 0%',
     threshold: 1
   }
 )
